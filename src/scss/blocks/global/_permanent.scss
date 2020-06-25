@@ -22,6 +22,10 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+.body--closed {
+  overflow: hidden;
+}
+
 img {
   height: auto;
   max-width: 100%;

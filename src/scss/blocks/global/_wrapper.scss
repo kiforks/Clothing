@@ -14,7 +14,7 @@
 //Mobile
 @include mobile {
   .wrapper {
-    width: $mobile-width;
+    width: 100%;
     @include padding-mobile;
   }
 }

@@ -37,14 +37,15 @@ function selectorToggle(selector, button, accessibility = false, focus = false, 
         //     console.log(toggleSelector.classList.contains('.' + selector + '--closed'))
         //   }
         // }
-        // event.preventDefault();
-        //
+
         toggleSelector.forEach(selectorItem => {
           let classList = selectorItem.classList;
 
           if(!preventDefault) {
             if(classList.contains('header__search--closed')) {
-              event.preventDefault();
+              if (window.matchMedia("(min-width: 767px)").matches) {
+                event.preventDefault();
+              }
             }
           } else {
             event.preventDefault();
@@ -61,6 +62,5 @@ selectorToggle('header__search', 'header__search-button', false, false,false);
 selectorToggle('header__search', 'header__input-button');
 selectorToggle('header__nav-box', 'header__button');
 selectorToggle('header__button', 'header__button');
-
-
+selectorToggle('body', 'header__button');
 
