@@ -1,0 +1,20 @@
+.wrapper {
+  width: $desktop-width;
+  @include center-margin;
+}
+
+//Tablet
+@include tablet {
+  .wrapper {
+    width: $tablet-width;
+    @include padding-tablet;
+  }
+}
+
+//Mobile
+@include mobile {
+  .wrapper {
+    width: $mobile-width;
+    @include padding-mobile;
+  }
+}

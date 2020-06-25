@@ -81,3 +81,12 @@
   display: flex;
   flex-direction: column;
 }
+
+@mixin transition {
+  transition: $transition-delay ease-in-out;
+}
+
+@mixin transition-fade {
+  transition: opacity $transition-delay ease-in-out;;
+}
+

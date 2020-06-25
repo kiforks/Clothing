@@ -79,6 +79,82 @@
   }
 }
 
+@mixin before-after-active {
+  &:active::before,
+  &:active::after {
+    @content;
+  }
+}
+
+@mixin before-active {
+  &:active::before {
+    @content;
+  }
+}
+
+@mixin after-active {
+  &:active::after {
+    @content;
+  }
+}
+
+@mixin before-after-active-opacity {
+  &:active::before,
+  &:active::after {
+    opacity: $down-opacity;
+  }
+}
+
+@mixin before-active-opacity {
+  &:active::before {
+    opacity: $down-opacity;
+  }
+}
+
+@mixin after-active-opacity {
+  &:active::after {
+    opacity: $down-opacity;
+  }
+}
+
+@mixin before-after-hover {
+  &:hover::before,
+  &:hover::after {
+    @content;
+  }
+}
+
+@mixin before-hover {
+  &:hover::before {
+    @content;
+  }
+}
+
+@mixin after-hover {
+  &:hover::after {
+    @content;
+  }
+}
+
+@mixin before-after-hover-opacity {
+  &:hover::before,
+  &:hover::after {
+    opacity: $hover-opacity;
+  }
+}
+
+@mixin before-hover-opacity {
+  &:hover::before {
+    opacity: $hover-opacity;
+  }
+}
+
+@mixin after-hover-opacity {
+  &:hover::after {
+    opacity: $hover-opacity;
+  }
+}
+
   /* Placeholder */
 @mixin placeholder {
   &::-webkit-input-placeholder {
@@ -100,23 +176,23 @@
 
 @mixin placeholder-focus{
   &:focus::-webkit-input-placeholder {
-    text-indent: 1000px;
-    -webkit-transition: text-indent 0.3s ease-in-out;
-    transition: text-indent 0.3s ease-in-out;
+    opacity: 0;
+    -webkit-transition: $transition-delay ease-in-out;
+    transition: $transition-delay ease-in-out;
   }
   &:focus:-moz-placeholder {
-    text-indent: 1000px;
-    -moz-transition: text-indent 0.3s ease-in-out;
-    transition: text-indent 0.3s ease-in-out;
+    opacity: 0;
+    -moz-transition: $transition-delay ease-in-out;
+    transition: $transition-delay ease-in-out;
   }
   &:focus::-moz-placeholder {
-    text-indent: 1000px;
-    -moz-transition: text-indent 0.3s ease-in-out;
-    transition: text-indent 0.3s ease-in-out;
+    opacity: 0;
+    -moz-transition: $transition-delay ease-in-out;
+    transition: $transition-delay ease-in-out;
   }
   &:focus:-ms-input-placeholder {
-    text-indent: 1000px;
-    -ms-transition: text-indent 0.3s ease-in-out;
-    transition: text-indent 0.3s ease-in-out;
+    opacity: 0;
+    -ms-transition: $transition-delay ease-in-out;
+    transition: $transition-delay ease-in-out;
   }
 }

@@ -7,10 +7,16 @@
   <title>Project</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/*.png">
-  <link rel="preload" href="fonts/*.woff2" as="font">
+<!--  <link rel="preload" href="fonts/Proxima Nova Black.woff2" as="font">-->
+<!--  <link rel="preload" href="fonts/Proxima Nova Bold.woff2" as="font">-->
+<!--  <link rel="preload" href="fonts/Proxima Nova Extrabold.woff2" as="font">-->
+<!--  <link rel="preload" href="fonts/Proxima Nova Light.woff2" as="font">-->
+<!--  <link rel="preload" href="fonts/Proxima Nova Regular.woff2" as="font">-->
+<!--  <link rel="preload" href="fonts/Proxima Nova Semibold.woff2" as="font">-->
   <include src="src/posthtml/templates/webp.html"></include>
 </head>
 <body>
+  <include src="src/posthtml/templates/sprite.html"></include>
   <include src="src/posthtml/blocks/_header.html"></include>
 
   <main class="main">
@@ -20,9 +26,14 @@
    <include src="src/posthtml/blocks/_footer.html"></include>
 
 <!--JS-->
+  <script src="js/plugins/aos.js"></script>
   <script src="js/script.js"></script>
 
   <script>
+    AOS.init({
+      duration: 1500
+    });
+
     objectFitImages();
   </script>
 </body>
