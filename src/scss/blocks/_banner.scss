@@ -1,0 +1,371 @@
+.banner {
+  color: $black;
+  background-color: $grey;
+}
+
+.banner__wrapper {
+  position: relative;
+  @include padding-vertical(92px, 94px);
+  background-image: url('../img/svg/points.svg');
+  background-repeat: no-repeat;
+  background-size: 473px;
+  background-position: left 106px top 33px;
+}
+
+.banner__animation {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  height: 405px;
+  width: 71px;
+  background-color: $light-red;
+}
+
+.banner__title {
+  position: relative;
+  z-index: 10;
+  @include reset-margin-text;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 68px;
+}
+
+.banner__description {
+  position: relative;
+  z-index: 10;
+  @include reset-margin-text;
+  font-size: 24.5px;
+  line-height: 27px;
+}
+
+.banner__sub-description {
+  @include reset-margin-text;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5.7px;
+}
+
+.banner__inner {
+  position: relative;
+  z-index: 100;
+  width: 545px;
+  padding: 45px 60px 33px 60px;
+  background-color: $light-red;
+}
+
+.banner__logo {
+  height: 496px;
+  @include object-fit(cover);
+}
+
+.banner__title-box {
+  position: relative;
+  padding-top: 22px;
+  padding-left: 44px;
+  padding-bottom: 41px;
+  margin-bottom: 30px;
+  @include before-after {
+    font-size: 1px;
+  }
+  @include before-clean {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 355px;
+    height: 100%;
+    border: 2px solid $black;
+  }
+  @include after-clean {
+    z-index: 2;
+    bottom: 2px;
+    right: 41px;
+    width: 300px;
+    height: 100%;
+    background-color: $light-red;
+  }
+}
+
+.banner__gallery {
+  position: absolute;
+  top: 0;
+  left: 240px;
+  width: 890px;
+  height: 496px;
+}
+
+.banner__list {
+  @include reset-list;
+  background-color: $grey;
+}
+
+.tns-controls {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  width: 241px;
+  height: 72px;
+  background-color: #202020;
+  outline: none;
+
+  button {
+    position: absolute;
+    z-index: 100;
+    @include center-transform-vertical;
+    display: inline-block;
+    @include reset-button;
+    @include padding-vertical(10px);
+    width: 51px;
+    height: 14px;
+    background-color: transparent;
+    outline: none;
+    box-sizing: content-box;
+    @include before-after-hover-opacity;
+    @include before-after-active-opacity;
+    @include before-after {
+      z-index: 100;
+      @include transition;
+    }
+    @include before-clean {
+      @include center-transform-vertical;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $grey-2;
+    }
+    @include after-clean {
+      width: 8px;
+      height: 7px;
+      border: 2px solid $grey-2;
+      border-right: 0;
+      border-top: 0;
+    }
+
+    &:first-child {
+      left: 35px;
+      @include after-clean {
+        left: 0;
+        transform: translateY(-48%) rotate(45deg);
+      }
+    }
+
+    &:last-child {
+      right: 35px;
+      @include after-clean {
+        right: 0;
+        transform: translateY(-50%) rotate(-135deg);
+      }
+    }
+  }
+}
+
+.banner__item {
+  height: 496px;
+}
+
+.tns-nav {
+  position: absolute;
+  z-index: 1000;
+  top: 110%;
+  left: 0;
+  @include flex;
+  align-items: center;
+  padding-left: 90px;
+  @include before-after {
+    @include center-transform-vertical;
+  }
+  @include before-clean {
+    left: 21px;
+    width: 57px;
+    height: 2px;
+    background-color: $black;
+  }
+  @include after-clean {
+    left: 1px;
+    width: 9px;
+    height: 9px;
+    background-color: $black;
+    border-radius: 50%;
+  }
+
+  button {
+    display: inline-block;
+    position: relative;
+    @include reset-button;
+    width: 19px;
+    height: 19px;
+    margin-right: 10.5px;
+    outline: none;
+    @include before {
+      @include center-transform;
+      width: 9px;
+      height: 9px;
+      background-color: $black;
+      border-radius: 50%;
+    }
+  }
+
+  .tns-nav-active {
+    @include before-clean {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: 2px solid $black;
+      border-radius: 50%;
+    }
+  }
+}
+
+.tns-inner {
+  overflow: hidden;
+}
+
+.tns-liveregion {
+  top: 104.5%;
+  left: 84.5%;
+  z-index: 10000;
+  font-size: 0;
+}
+
+.current {
+  font-size: 22px;
+  line-height: 26px;
+  color: $grey-2;
+}
+
+//Tablet
+@include tablet {
+  .banner__animation {
+    display: none;
+  }
+
+  .banner__inner {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .banner__title-box {
+    @include before-clean {
+      width: 415px;
+    }
+  }
+
+  .banner__gallery {
+    position: static;
+    width: 100%;
+  }
+
+  .tns-item {
+    padding-right: 0 !important;
+  }
+
+  .banner__wrapper {
+    padding-bottom: 90px;
+  }
+
+  .tns-controls {
+    display: none;
+    //right: $tablet-padding;
+    //top: 92%;
+  }
+
+  .tns-liveregion {
+    display: none;
+    //top: 94.5%;
+    //left: 78.5%;
+  }
+
+  .tns-nav {
+    top: 95%;
+    @include center-transform-horizon;
+  }
+}
+
+//Mobile
+@include mobile {
+  .banner__wrapper {
+    padding: 0;
+    background-image: none;
+  }
+
+  .banner__inner {
+    width: 100%;
+    padding: 0 $mobile-padding 15px;
+    margin-bottom: 15px;
+  }
+
+  .banner__title-box {
+    width: 100%;
+    padding: 0;
+    padding-top: 15px;
+    margin-bottom: 15px;
+    @include before-after-clean {
+      display: none;
+    }
+  }
+
+  .banner__title {
+    font-size: 28px;
+    line-height: 120%;
+    margin-bottom: 10px;
+  }
+
+  .banner__description {
+    font-size: 18px;
+    line-height: 120%;
+  }
+
+  .banner__sub-description {
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 3px;
+  }
+
+  .banner__gallery {
+    height: 295px;
+    @include padding-mobile;
+  }
+
+  .banner__item {
+    height: 250px;
+  }
+
+  .banner__logo {
+    height: 250px;
+  }
+
+  .tns-controls {
+    display: none;
+  }
+
+  .tns-nav {
+    justify-content: flex-end;
+    top: 93%;
+    width: 100%;
+    padding-right: $mobile-padding;
+    padding-left: 105px;
+    @include before-clean {
+      left: 40px;
+    }
+    @include after-clean {
+      left: 20px;
+    }
+
+    button {
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .current {
+    display: none;
+  }
+}
+

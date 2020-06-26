@@ -27,6 +27,7 @@
 
 // JS
 'js/aos',
+'js/tiny-slider',
 
 
 // Blocks
@@ -35,7 +36,11 @@
 'blocks/title',
 'blocks/header',
 'blocks/footer',
+'blocks/global/index-animations',
 
   /* main */
 'blocks/nav',
-'blocks/main';
+'blocks/main',
+'blocks/banner',
+'blocks/collections',
+'blocks/gallery';

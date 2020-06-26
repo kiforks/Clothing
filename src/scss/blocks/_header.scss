@@ -1,13 +1,23 @@
 .header {
   padding-top: 23px;
+  padding-bottom: 143px;
   font-size: 14px;
   font-weight: 600;
   line-height: 17px;
 }
 
 .header__wrapper {
+  position: relative;
+  z-index: 100;
   @include flex;
+  align-items: flex-start;
   padding-right: 70px;
+  margin-bottom: 21px;
+}
+
+.header__banner {
+  position: relative;
+  z-index: 50;
 }
 
 .header__logo-link {
@@ -67,7 +77,6 @@
 
 .header__inner {
   @include flex;
-  min-height: 115px;
   min-width: 9.5%;
   max-width: 40%;
   padding-left: 15px;
@@ -237,6 +246,8 @@
   @include reset-list;
   @include hover {
     .header__languages-inner {
+      position: absolute;
+      top: 100%;
       @include flex-column;
       width: 100%;
       height: auto;
@@ -254,6 +265,10 @@
 
 //Tablet
 @include tablet {
+  .header {
+    padding-bottom: 0;
+  }
+
   .header__nav {
     padding-left: 0;
     max-width: 300px;
@@ -296,6 +311,11 @@
 @include mobile {
   .header {
     padding-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .header__wrapper {
+    margin-bottom: 0;
   }
 
   .header__mobile-box {
@@ -344,7 +364,7 @@
   }
 
   .header__nav-box {
-    position: fixed;
+    position: absolute;
     z-index: 10;
     top: 100%;
     left: 0;
@@ -470,6 +490,7 @@
     flex-grow: 1;
     @include hover {
       .header__languages-inner {
+        position: static;
         @include flex-row;
         width: auto;
         height: auto;
