@@ -33,6 +33,12 @@
   text-align: right;
   letter-spacing: 3.5px;
   border-bottom: 1px solid white;
+
+  &--gallery {
+    text-align: left;
+    padding-left: 75px;
+    letter-spacing: 8px;
+  }
 }
 
 .index-animations__point {
@@ -68,6 +74,13 @@
   }
 }
 
+//Tablet
+@include tablet {
+  .index-animations__site {
+    top: 60px;
+  }
+}
+
 //Mobile
 @include mobile {
   .index-animations {
@@ -76,9 +89,6 @@
 
   .index-animations__site {
     display: none;
-    //position: static;
-    //margin-bottom: 10px;
-    //transform: rotate(0);
   }
 
   .index-animations__block {

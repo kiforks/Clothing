@@ -1,3 +1,11 @@
 .gallery {
   @include flex;
 }
+
+
+//Tablet
+//@include tablet {
+//  .gallery__title {
+//    &--g
+//  }
+//}

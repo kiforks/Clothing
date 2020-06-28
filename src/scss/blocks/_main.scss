@@ -32,18 +32,19 @@
 .main__item {
   position: relative;
   padding-top: 121px;
+  margin-bottom: 13px;
 
   &--gallery {
     .main__title {
       text-align: left;
       padding-right: 0;
-      padding-left: 152px;
+      padding-left: 144px;
     }
 
     .main__number {
       text-align: right;
       padding-left: 0;
-      padding-right: 29px;
+      padding-right: 39px;
     }
   }
 }
@@ -51,7 +52,8 @@
 //Tablet
 @include tablet {
   .main__item {
-    padding-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
   }
 }
 
@@ -70,5 +72,20 @@
     padding: 0;
     font-size: 20px;
     line-height: 120%;
+  }
+
+  .main__item {
+    padding-top: 0;
+
+    &--gallery {
+      .main__title {
+        justify-content: flex-start;
+        padding-left: 0;
+      }
+
+      .main__number {
+        padding-right: 0;
+      }
+    }
   }
 }
