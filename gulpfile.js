@@ -11,7 +11,8 @@ const path = {
             svg: buildFolder+ '/img/**/sprite.svg',
             retina: [buildFolder + '/img/@1x/', buildFolder + '/img/@2x/', buildFolder + '/img/@3x/'],
             libs: buildFolder + '/libs/',
-            webp: buildFolder + '/img/**/*.{jpg,png}'
+            webp: buildFolder + '/img/**/*.{jpg,png}',
+            video:  buildFolder + '/video'
         },
         src: {
             html: [sourceFolder + '/*.html', '!' + sourceFolder + '/_*.html'],
@@ -23,7 +24,8 @@ const path = {
             fonts: sourceFolder + '/fonts/**/*.ttf',
             otf: sourceFolder + '/fonts/**/*.otf',
             retina: sourceFolder + '/img/main/**/*{jpg,png}',
-            libs: sourceFolder + '/libs/**/*'
+            libs: sourceFolder + '/libs/**/*',
+            video: sourceFolder + '/video/**/*'
         },
         watch: {
             html: sourceFolder + '/**/*.html',
@@ -257,6 +259,11 @@ function cleanGit() {
     return del(sourceFolder + '/**/.gitkeep');
 }
 
+function videoBuild() {
+  return src(path.src.video)
+    .pipe(dest(path.build.video))
+}
+
 
 function libs() {
   return src(path.src.libs)
@@ -269,12 +276,13 @@ function libs() {
 // Build
 const fonts = gulp.series(ttfConversion, woffConversion);
 const imageBuild = gulp.series(ignoreImagesBuild, sprite, imageSorting, webpBuild, images); // if you don't need retina images just delete task 'retinaImages' from here
-const build = gulp.series(clean, gulp.series(imageBuild, css, html, js, jsIgnoreBuild, libs, fonts));
+const build = gulp.series(clean, gulp.series(imageBuild, videoBuild, css, html, js, jsIgnoreBuild, libs, fonts));
 const watch = gulp.parallel(watchFiles, serve);
 
 
 
 //Exports
+exports.videoBuild = videoBuild;
 exports.webpBuild = webpBuild;
 exports.sprite = sprite;
 exports.libs = libs;

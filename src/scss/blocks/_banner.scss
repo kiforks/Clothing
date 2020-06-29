@@ -222,6 +222,12 @@
   }
 }
 
+.tns-outer {
+  & > button {
+    display: none;
+  }
+}
+
 .tns-inner {
   overflow: hidden;
 }

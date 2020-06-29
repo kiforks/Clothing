@@ -1,0 +1,195 @@
+.video {
+  width: 1200px;
+  height: 608px;
+  background-color: transparent;
+  outline: 0;
+}
+
+.video__button {
+  position: absolute;
+  top: 15px;
+  left: 1041px;
+  height: 25px;
+  width: 25px;
+  @include reset-button;
+  outline: 0;
+  opacity: 0;
+  @include transition-fade;
+  @include before-after-active-opacity;
+  @include before-after-hover-opacity;
+  @include before-after {
+    z-index: 100000;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $grey;
+    @include transition;
+  }
+  @include before-clean {
+    transform: rotate(45deg);
+  }
+  @include after-clean {
+    transform: rotate(-45deg);
+  }
+
+  &--closed {
+    z-index: 100;
+    width: 80px;
+    height: 80px;
+    @include center-transform;
+    @include before-clean {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      border-radius: 50%;
+    }
+    @include after {
+      top: auto;
+      width: 0;
+      height: 0;
+      @include center-transform;
+      left: 42px;
+      border-top: 10px solid transparent;
+      border-left: 20px solid black;
+      border-bottom: 10px solid transparent;
+      background-color: transparent;
+    }
+  }
+}
+
+.video__box {
+  position: absolute;
+  z-index: 500;
+  width: 80vw;
+  height: 80vh;
+  @include center-transform;
+
+  &--closed {
+    position: static;
+    width: 1200px;
+    height: 608px;
+    transform: translate(0, 0);
+  }
+  @include hover {
+    .video__button {
+      opacity: 1;
+    }
+  }
+}
+
+.video__inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  @include object-fit(cover);
+  outline: 0;
+  border: 0;
+}
+
+.video__description {
+  position: absolute;
+  background-color: transparent;
+  z-index: 10;
+  top: 57px;
+  left: 52px;
+  width: 475px;
+  @include reset-margin-text;
+  font-size: 30px;
+  line-height: 36px;
+  color: white;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.video__overlay {
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &--closed {
+    position: static;
+  }
+}
+
+//Tablet
+@include tablet {
+  .video {
+    width: 100%;
+    height: 70vh;
+    background-color: transparent;
+  }
+
+  .video__box {
+    width: 708px;
+    height: 450px;
+
+    &--closed {
+      height: 100%;
+    }
+  }
+
+  .video__description {
+    top: 30px;
+    left: 30px;
+    width: 300px;
+    font-size: 22px;
+    line-height: 120%;
+  }
+
+  .video__button {
+    left: auto;
+    right: 30px;
+
+    &--closed {
+      @include center-transform;
+    }
+  }
+}
+
+//Mobile
+@include mobile {
+  .video {
+    height: 35vh;
+  }
+
+  .video__box {
+    width: 100%;
+    height: 200px;
+
+    &--closed {
+      height: 100%;
+    }
+  }
+
+  .video__button {
+    width: 20px;
+    height: 20px;
+    right: 20px;
+
+    &--closed {
+      width: 60px;
+      height: 60px;
+      @include after {
+        left: 32px;
+      }
+    }
+  }
+
+  .video__description {
+    left: 15px;
+    top: 15px;
+    font-size: 12px;
+    width: 80%;
+  }
+}

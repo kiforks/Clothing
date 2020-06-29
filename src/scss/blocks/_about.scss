@@ -1,0 +1,47 @@
+.about {
+  @include flex;
+}
+
+.about__description {
+  @include reset-margin-text;
+  padding-left: 143px;
+  margin-bottom: 68px;
+  line-height: 20px;
+}
+
+.about__title {
+  margin-bottom: 42px;
+}
+
+.about__link {
+  @include reset-margin-text;
+  padding-left: 143px;
+}
+
+//Tablet
+@include tablet {
+  .about__title {
+    margin-bottom: 25px;
+  }
+
+  .about__description {
+    margin-bottom: 25px;
+  }
+}
+
+//Mobile
+@include mobile {
+  .about__title {
+    padding-top: 6px;
+    margin-bottom: 15px;
+  }
+
+  .about__description {
+    padding-left: 0;
+  }
+
+  .about__link {
+    padding-left: 0;
+    width: 100%;
+  }
+}

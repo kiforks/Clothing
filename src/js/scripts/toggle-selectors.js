@@ -19,7 +19,7 @@ function selectorToggle(selector, button, accessibility = false, focus = false, 
             classList.add(focusOpenClass);
           }
         })
-      }
+      };
 
       buttonItem.onblur = () => {
         toggleSelector.forEach(selectorItem => {
@@ -63,4 +63,8 @@ selectorToggle('header__search', 'header__input-button');
 selectorToggle('header__nav-box', 'header__button');
 selectorToggle('header__button', 'header__button');
 selectorToggle('body', 'header__button');
+selectorToggle('video__button', 'video__button');
+selectorToggle('video__overlay', 'video__button');
+selectorToggle('video__box', 'video__button');
+
 

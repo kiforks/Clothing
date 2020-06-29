@@ -1,4 +1,5 @@
 .index-animations {
+  z-index: -1;
   font-size: 15px;
   font-weight: 600;
   line-height: 18px;
@@ -34,7 +35,8 @@
   letter-spacing: 3.5px;
   border-bottom: 1px solid white;
 
-  &--gallery {
+  &--gallery,
+  &--about {
     text-align: left;
     padding-left: 75px;
     letter-spacing: 8px;
@@ -56,7 +58,8 @@
 }
 
 .main__item {
-  &--gallery {
+  &--gallery,
+  &--about {
     .index-animations__site {
       left: auto;
       right: -48px;
@@ -78,6 +81,13 @@
 @include tablet {
   .index-animations__site {
     top: 60px;
+  }
+
+  .index-animations__description {
+    &--about {
+      padding-left: 15px;
+      letter-spacing: 6px;
+    }
   }
 }
 

@@ -1,0 +1,110 @@
+.news {
+  @include flex;
+}
+
+.news__list {
+  @include flex;
+  justify-content: space-between;
+  @include reset-list;
+  width: 100%;
+  margin-bottom: 66px;
+}
+
+.news__item {
+  width: 360px;
+
+  &:nth-child(3n+1) {
+    .news__subtitle {
+      padding-left: 16px;
+    }
+  }
+}
+
+.news__subtitle {
+  @include reset-margin-text;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 43px;
+}
+
+.news__date {
+  position: relative;
+  @include reset-margin-text;
+  margin-bottom: 22px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  text-align: right;
+  @include before {
+    z-index: -1;
+    bottom: 0;
+    right: 12px;
+    width: 82px;
+    height: 12px;
+    background-color: $light-red;
+  }
+}
+
+.news__description {
+  @include reset-margin-text;
+  padding-right: 15px;
+  line-height: 20px;
+}
+
+.news__title {
+  margin-bottom: 58px;
+}
+
+.news__link {
+  @include flex;
+  justify-content: center;
+  width: 100%;
+  @include reset-margin-text;
+}
+
+//Tablet
+@include tablet {
+  .news__title {
+    margin-bottom: 35px;
+  }
+
+  .news__item {
+    width: 30%;
+
+    &:nth-child(3n+1) {
+      .news__subtitle {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .news__subtitle {
+    margin-bottom: 15px;
+  }
+
+  .news__list {
+    margin-bottom: 30px;
+  }
+}
+
+//Mobile
+@include mobile {
+  .news__item {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .news__title {
+    margin-bottom: 15px;
+  }
+
+  .news__subtitle {
+    margin-bottom: 5px;
+  }
+
+  .news__date {
+    margin-bottom: 15px;
+  }
+}

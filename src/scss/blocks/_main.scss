@@ -2,6 +2,10 @@
 //  overflow: hidden;
 //}
 
+.main {
+  margin-bottom: 102px;
+}
+
 .main__list {
   @include reset-list;
 }
@@ -34,7 +38,10 @@
   padding-top: 121px;
   margin-bottom: 13px;
 
-  &--gallery {
+  &--gallery,
+  &--about {
+    margin-bottom: 97px;
+
     .main__title {
       text-align: left;
       padding-right: 0;
@@ -46,14 +53,46 @@
       padding-left: 0;
       padding-right: 39px;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--video {
+    position: static;
+    padding-top: 0;
+    overflow: hidden;
+    margin-bottom: 73px;
+  }
+
+  &--news {
+    margin-bottom: 117px;
   }
 }
 
 //Tablet
 @include tablet {
+  .main {
+    margin-bottom: 45px;
+  }
+
   .main__item {
     margin-bottom: 0;
     overflow: hidden;
+
+    &--gallery,
+    &--about {
+      margin-bottom: 30px;
+    }
+
+    &--video {
+      margin-bottom: 20px;
+    }
+
+    &--news {
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -77,7 +116,8 @@
   .main__item {
     padding-top: 0;
 
-    &--gallery {
+    &--gallery,
+    &--about {
       .main__title {
         justify-content: flex-start;
         padding-left: 0;

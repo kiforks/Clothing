@@ -1,0 +1,31 @@
+.button {
+  position: relative;
+  display: inline-block;
+  width: 265px;
+  padding: 13px 15px 13px 82px;
+  border: 4px solid #222222;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  @include before {
+    left: 13px;
+    height: 2px;
+    width: 60px;
+    background-color: #909090;
+    @include center-transform-vertical;
+  }
+  @include hover {
+    color: white;
+    background-color: #222222;
+    @include transition;
+  }
+}
+
+//Mobile
+@include mobile {
+  .button {
+    width: 100%;
+  }
+}
