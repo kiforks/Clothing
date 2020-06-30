@@ -59,6 +59,7 @@
 }
 
 .main-news__count {
+  @include flex;
   @include reset-margin-text;
 }
 
@@ -67,12 +68,21 @@
 }
 
 .main-news__label {
+  @include flex;
+  @include center-flex;
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
 
   &--sort {
-    margin-right: 15px;
+    @include reset-margin-text;
+    width: 202px;
+    margin-right: 10px;
+  }
+
+  &--number {
+    width: 170px;
+    margin-right: 20px;
   }
 }
 
@@ -147,3 +157,12 @@
 .main-news__select {
   position: relative;
 }
+
+.main-news__number {
+  width: 78px;
+  font-size: 18px;
+  line-height: 21px;
+  color: $black;
+  border: 4px solid $black;
+}
+

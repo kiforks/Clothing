@@ -1,77 +1,54 @@
-// require('nodelist-foreach-polyfill');
+$('.select').each(function() {
+  const _this = $(this),
+    selectOption = _this.find('option'),
+    selectOptionLength = selectOption.length,
+    selectedOption = selectOption.filter(':selected'),
+    duration = 450; // длительность анимации
 
-if(document.querySelector('.select')) {
-  InitSelects();
-}
+  _this.hide();
+  _this.wrap('<div class="select"></div>');
+  $('<div>', {
+    class: 'new-select',
+    text: _this.children('option:disabled').text()
+  }).insertAfter(_this);
 
-function InitSelects() {
-  const selects = document.querySelectorAll('.select');
+  const selectHead = _this.next('.new-select');
+  $('<div>', {
+    class: 'new-select__list'
+  }).insertAfter(selectHead);
 
-  if (selects.length === 0) return;
-
-  selects.forEach(select => initSelect(select));
-}
-
-function initSelect (select) {
-  const input = select.querySelector('input');
-  if (!input) {
-    return;
+  const selectList = selectHead.next('.new-select__list');
+  for (let i = 1; i < selectOptionLength; i++) {
+    $('<div>', {
+      class: 'new-select__item',
+      html: $('<span>', {
+        text: selectOption.eq(i).text()
+      })
+    })
+      .attr('data-value', selectOption.eq(i).val())
+      .appendTo(selectList);
   }
-  const list = select.querySelector('.select__list');
-  const options = list.querySelectorAll('.select__option');
 
-  // //show list on focus
-  // select.addEventListener('click', () => {
+  const selectItem = selectList.find('.new-select__item');
+  selectList.slideUp(0);
+  selectHead.on('click', function() {
+    if ( !$(this).hasClass('on') ) {
+      $(this).addClass('on');
+      selectList.slideDown(duration);
 
-  //   // list.classList.('open');
-  //   list.classList.toggle('open');
+      selectItem.on('click', function() {
+        let chooseItem = $(this).data('value');
 
-  //   select.addEventListener('mouseleave', () => {
+        $('select').val(chooseItem).attr('selected', 'selected');
+        selectHead.text( $(this).find('span').text() );
 
-  //     list.classList.remove('.open');
-  //   })
-  // })
+        selectList.slideUp(duration);
+        selectHead.removeClass('on');
+      });
 
-  //show list on focus
-  input.addEventListener('focus', () => {
-    console.log('focus');
-
-    list.classList.add('open');
-    select.classList.add('active-open');
-  });
-
-  //hide list on focusout
-  input.addEventListener('focusout', () => {
-    list.classList.remove('open');
-    select.classList.remove('active-open');
-    if (input.value !== '') {
-      input.classList.add('has-content');
     } else {
-      input.classList.remove('has-content');
+      $(this).removeClass('on');
+      selectList.slideUp(duration);
     }
   });
-
-  //show list on list hover in
-  list.addEventListener('mouseenter', () => {
-    list.classList.add('hovered');
-  });
-
-  //hide list on list hover out
-  list.addEventListener('mouseleave', () => {
-    list.classList.remove('hovered');
-  });
-
-
-  //set value of input equal clicked option textContent and hide list
-  options.forEach(option => {
-    option.addEventListener('click', () => {
-      input.value = option.textContent.toString().trim();
-      list.classList.remove('hovered');
-      list.classList.remove('open');
-      select.classList.remove('active-open');
-      input.classList.add('has-content');
-    })
-  });
-
-}
-
+});

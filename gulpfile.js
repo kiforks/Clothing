@@ -36,6 +36,7 @@ const path = {
             fonts: sourceFolder + '/fonts/**/*.ttf',
             otf: sourceFolder + '/fonts/**/*.otf',
             svg: sourceFolder + '/img/**/icon-*.svg',
+            video: sourceFolder + '/video/**/*'
         },
         clean: './' + buildFolder + '/'
     };
@@ -244,9 +245,11 @@ function watchFiles() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
+    gulp.watch([path.watch.js], jsIgnoreBuild);
     gulp.watch([path.watch.img], imageBuild);
     gulp.watch([path.watch.fonts], woffConversion);
     gulp.watch([path.watch.otf], ttfConversion);
+    gulp.watch([path.watch.video], videoBuild);
 }
 
 
@@ -262,6 +265,7 @@ function cleanGit() {
 function videoBuild() {
   return src(path.src.video)
     .pipe(dest(path.build.video))
+    .pipe(browserSync.stream())
 }
 
 
