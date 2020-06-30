@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <title>Project</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <!--  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/*.png">-->
+  <include src="src/posthtml/templates/fonts.html"></include>
+  <include src="src/posthtml/templates/webp.html"></include>
+</head>
+<body class="news-body">
+  <include src="src/posthtml/templates/sprite.html"></include>
+  <include src="src/posthtml/blocks/_header.html"></include>
+
+  <main class="main-news wrapper">
+    <h3 class="main-news__subtitle subtitle">
+      Главная ⸺
+      <span class="subtitle__pseudo subtitle__pseudo--news">Блог</span>
+    </h3>
+
+    <article class="main-news__box">
+      <h1 class="main-news__title title">Новости и публикации</h1>
+
+      <div class="main-news__wrapper">
+
+        <form class="main-news__search">
+          <input type="text" class="main-news__input" placeholder="Искать статьи..." id="main-news__search">
+          <button class="main-news__search-button" type="submit">
+            <span class="visually-hidden">Поиск</span>
+            <svg class="main-news__icon-search" width="17" height="16" aria-label="Поиск" aria-hidden="true">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </button>
+        </form>
+
+        <label class="main-news__label main-news__label--sort" for="main-news__sort">Порядок сортировки</label>
+
+        <div class="main-news__select select">
+          <div class="input-wrapper input-wrapper--select input-effect main-news__select-wrapper">
+            <p class="main-news__select-inner">
+              <input class="effect-16 main-news__select-input" type="text" placeholder="По возрастанию цены" name="main-news__sort" id="main-news__sort" readonly>
+              <span class="main-news__border"></span>
+            </p>
+          </div>
+          <ul class="select__list">
+            <li class="select__option">1</li>
+            <li class="select__option">2</li>
+            <li class="select__option">3</li>
+          </ul>
+        </div>
+
+        <p class="main-news__count">
+          <label for="main-news__number" class="main-news__label main-news__label--number">Показать товаров</label>
+          <input type="number" class="main-news__number" id="main-news__number" value="12">
+        </p>
+
+      </div>
+    </article>
+  </main>
+
+  <include src="src/posthtml/blocks/_footer.html"></include>
+
+  <!--JS-->
+  <script src="js/plugins/aos.js"></script>
+  <script src="js/plugins/tiny-slider.js"></script>
+  <script src="js/plugins/select.js"></script>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 1500
+    });
+
+    objectFitImages();
+  </script>
+
+</body>
+</html>

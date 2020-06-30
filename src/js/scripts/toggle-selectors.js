@@ -62,9 +62,10 @@ selectorToggle('header__search', 'header__search-button', false, false,false);
 selectorToggle('header__search', 'header__input-button');
 selectorToggle('header__nav-box', 'header__button');
 selectorToggle('header__button', 'header__button');
+selectorToggle('header', 'header__button');
 selectorToggle('body', 'header__button');
 selectorToggle('video__button', 'video__button');
-selectorToggle('video__overlay', 'video__button');
+selectorToggle('video-overlay', 'video__button');
 selectorToggle('video__box', 'video__button');
-
+selectorToggle('body', 'video__button');
 

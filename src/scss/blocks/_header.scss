@@ -4,6 +4,7 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 17px;
+  overflow: hidden;
 }
 
 .header__wrapper {
@@ -99,15 +100,17 @@
 
 .header__input {
   width: 200px;
-  padding: 7px 5px;
+  padding: 7px 23px 7px 5px;
   margin-left: 5px;
   border: 0;
   border-bottom: 1px solid $black;
   outline: none;
+  font-size: 14px;
   transition: width ease-in-out $transition-delay;
   @include placeholder-focus;
   @include placeholder {
-    color: inherit;
+    color: black;
+    font-size: 14px;
     font-weight: inherit;
   }
 }
@@ -310,11 +313,19 @@
 //Mobile
 @include mobile {
   .header {
+    position: relative;
+    z-index: 1000;
     padding-top: 0;
     margin-bottom: 15px;
+    background-color: white;
+
+    &--closed {
+      height: 100vh;
+    }
   }
 
   .header__wrapper {
+    position: static;
     margin-bottom: 0;
   }
 
@@ -365,8 +376,8 @@
 
   .header__nav-box {
     position: absolute;
-    z-index: 10;
-    top: 100%;
+    z-index: 99;
+    top: 61px;
     left: 0;
     flex-direction: column;
     align-content: space-between;
@@ -395,7 +406,7 @@
   .header__inner {
     width: auto;
     max-width: 100%;
-    margin-top: auto;
+    margin-top: 5px;
     @include padding-mobile;
   }
 
@@ -420,17 +431,21 @@
     }
   }
 
+  .header__search {
+    margin-bottom: 20px;
+  }
+
 
   .header__search,
   .header__search--closed {
-    order: 3;
+    @include flex;
     width: 100%;
-    padding-top: 15px;
 
     .header__input {
       width: 87%;
       padding: 7px 5px;
       margin-left: 0;
+      font-size: 18px;
       border-bottom: 1px solid $black;
       @include placeholder {
         font-size: 18px;
@@ -450,9 +465,11 @@
   }
 
   .header__search-button {
+    order: 4;
     width: 25px;
     height: 25px;
-    margin-right: 10px;
+    margin-right: 0;
+    margin-left: 10px;
   }
 
   .header__icon-search {

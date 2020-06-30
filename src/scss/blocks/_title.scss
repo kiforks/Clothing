@@ -1,0 +1,7 @@
+.title {
+  @include reset-margin-text;
+  font-size: 35px;
+  line-height: 42px;
+  font-weight: 600;
+  text-transform: uppercase;
+}

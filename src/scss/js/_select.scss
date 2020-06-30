@@ -1,0 +1,44 @@
+.select__list {
+  position: absolute;
+  visibility: hidden;
+  z-index: 100;
+  @include reset-list;
+  width: 100%;
+  opacity: 0;
+  @include transition-fade;
+
+  &.open {
+    top: 100%;
+    right: 1px;
+    border: 4px solid $black;
+    border-top: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+//.select__list {
+//  position: static;
+//  z-index: 100;
+//  width: 240px;
+//  top: 100%;
+//  right: 1px;
+//  @include reset-list;
+//  border: 4px solid $black;
+//  border-top: 0;
+//  opacity: 1;
+//
+//  &.open {
+//    position: absolute;
+//  }
+//}
+
+.select__option {
+  padding: 9px 55px 9px 12px;
+  background-color: white;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    border-bottom: 2px solid $black;
+  }
+}

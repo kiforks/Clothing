@@ -1,0 +1,24 @@
+.subtitle {
+  @include reset-margin-text;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: normal;
+  text-align: right;
+}
+
+.subtitle__pseudo {
+  position: relative;
+  display: inline-block;
+  @include before {
+    z-index: -1;
+    left: -5px;
+    bottom: -4px;
+    height: 14px;
+    width: 100%;
+    background-color: $light-red;
+  }
+
+  &--news {
+    margin-left: 15px;
+  }
+}

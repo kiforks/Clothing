@@ -7,12 +7,7 @@
   <title>Project</title>
   <link rel="stylesheet" href="css/style.min.css">
 <!--  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/*.png">-->
-  <link rel="preload" href="fonts/Proxima-Nova-Black.woff2" as="font">
-  <link rel="preload" href="fonts/Proxima-Nova-Bold.woff2" as="font">
-  <link rel="preload" href="fonts/Proxima-Nova-Extrabold.woff2" as="font">
-  <link rel="preload" href="fonts/Proxima-Nova-Light.woff2" as="font">
-  <link rel="preload" href="fonts/Proxima-Nova-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/Proxima-Nova-Semibold.woff2" as="font">
+  <include src="src/posthtml/templates/fonts.html"></include>
   <include src="src/posthtml/templates/webp.html"></include>
 </head>
 <body class="body">
@@ -22,24 +17,24 @@
   <main class="main">
 
     <ol class="main__list">
-      <li class="main__item main__item wrapper">
+      <li class="main__item main__item wrapper" id="collections" data-aos="fade-down">
         <include src="src/posthtml/blocks/_collections.html"></include>
       </li>
-      <li class="main__item main__item--gallery wrapper">
+      <li class="main__item main__item--gallery wrapper" id="gallery" data-aos="fade-down">
         <include src="src/posthtml/blocks/_gallery.html"></include>
       </li>
-      <li class="main__item main__item--video wrapper">
+      <li class="main__item main__item--video wrapper video-overlay video-overlay--closed" data-aos="fade-down">
         <include src="src/posthtml/blocks/_video.html"></include>
       </li>
-      <li class="main__item main__item--news wrapper">
+      <li class="main__item main__item--news wrapper" data-aos="fade-down" id="news">
         <include src="src/posthtml/blocks/_news.html"></include>
       </li>
-      <li class="main__item main__item--about wrapper">
+      <li class="main__item main__item--about wrapper" id="about" data-aos="fade-down">
         <include src="src/posthtml/blocks/_about.html"></include>
       </li>
     </ol>
-
   </main>
+
 
   <include src="src/posthtml/blocks/_footer.html"></include>
 

@@ -1,0 +1,149 @@
+.news-body .header {
+  padding-bottom: 115px;
+}
+
+.main-news__subtitle {
+  margin-bottom: 69px;
+}
+
+.main-news__wrapper {
+  @include flex;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.main-news__search {
+  position: relative;
+  align-self: flex-start;
+  margin-right: 47px;
+}
+
+.main-news__input {
+  @include reset-input;
+  width: 390px;
+  padding: 9px 12px;
+  border: 4px solid $black;
+  outline: none;
+  @include placeholder {
+    font-size: inherit;
+    color: $black;
+  }
+  @include placeholder-focus;
+}
+
+.main-news__search-button {
+  @include reset-button;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  @include flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 100%;
+  @include hover {
+    .main-news__icon-search {
+      fill: $light-red;
+      @include transition;
+    }
+  }
+  @include active-opacity;
+  @include before {
+    left: 0;
+    @include center-transform-vertical;
+    height: 50%;
+    width: 50px;
+    border-left: 1px solid black;
+  }
+}
+
+.main-news__count {
+  @include reset-margin-text;
+}
+
+.main-news__title {
+  margin-bottom: 57px;
+}
+
+.main-news__label {
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  &--sort {
+    margin-right: 15px;
+  }
+}
+
+.main-news__select-input {
+  width: 240px;
+  @include padding-vertical(9px);
+  @include padding-horizon(55px, 12px);
+  border: 4px solid $black;
+  box-sizing: border-box;
+  cursor: pointer;
+  @include placeholder {
+    color: $black;
+  }
+}
+
+.main-news__select-wrapper {
+  @include flex;
+  align-items: center;
+  width: 100%;
+}
+
+.main-news__select-inner {
+  position: relative;
+  @include reset-margin-text;
+  cursor: pointer;
+  @include before-after {
+    @include transition;
+  }
+  @include before-clean {
+    z-index: 10;
+    top: 13px;
+    right: 25px;
+    width: 2px;
+    height: 15px;
+    background-color: $black;
+  }
+  @include after-clean {
+    top: 21px;
+    right: 22px;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    border: 2px solid $black;
+    border-right: 0;
+    border-top: 0;
+    transform: rotate(-45deg);
+  }
+  @include hover {
+    @include after-clean {
+      top: 20.499px;
+      right: 26px;
+      transform: rotate(45deg);
+    }
+    @include before-clean {
+      top: 17px;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.main-news__border {
+  position: absolute;
+  right: 48px;
+  top: 10px;
+  z-index: 10;
+  display: inline-block;
+  height: 60%;
+  width: 1px;
+  background-color: $black;
+}
+
+.main-news__select {
+  position: relative;
+}

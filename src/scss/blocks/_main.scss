@@ -1,9 +1,6 @@
-//.main {
-//  overflow: hidden;
-//}
-
 .main {
   margin-bottom: 102px;
+  overflow: hidden;
 }
 
 .main__list {
@@ -98,6 +95,11 @@
 
 //Mobile
 @include mobile {
+  .main {
+    position: relative;
+    z-index: 500;
+  }
+
   .main__number {
     padding-left: 0;
     font-size: 28px;

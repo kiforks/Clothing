@@ -7,6 +7,7 @@
 
 .video__button {
   position: absolute;
+  z-index: 1000;
   top: 15px;
   left: 1041px;
   height: 25px;
@@ -14,6 +15,7 @@
   @include reset-button;
   outline: 0;
   opacity: 0;
+  cursor: pointer;
   @include transition-fade;
   @include before-after-active-opacity;
   @include before-after-hover-opacity;
@@ -106,9 +108,9 @@
   cursor: default;
 }
 
-.video__overlay {
+.video-overlay {
   position: fixed;
-  z-index: 10000;
+  z-index: 1000;
   width: 100%;
   height: 100%;
   top: 0;
@@ -119,6 +121,7 @@
 
   &--closed {
     position: static;
+    width: $desktop-width;
   }
 }
 
@@ -126,16 +129,15 @@
 @include tablet {
   .video {
     width: 100%;
-    height: 70vh;
+    height: 450px;
     background-color: transparent;
   }
 
   .video__box {
     width: 708px;
-    height: 450px;
 
     &--closed {
-      height: 100%;
+      height: 450px;
     }
   }
 
@@ -150,9 +152,18 @@
   .video__button {
     left: auto;
     right: 30px;
+    opacity: 1;
 
     &--closed {
       @include center-transform;
+    }
+  }
+
+  .video-overlay {
+    background-color: (0, 0, 0, 0.4);
+
+    &--closed {
+      background-color: white;
     }
   }
 }
