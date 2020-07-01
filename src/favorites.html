@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <title>Project</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <!--  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/*.png">-->
+  <include src="src/posthtml/templates/fonts.html"></include>
+  <include src="src/posthtml/templates/webp.html"></include>
+</head>
+<body class="news-body">
+<include src="src/posthtml/templates/sprite.html"></include>
+<include src="src/posthtml/blocks/_header.html"></include>
+
+<div class="favorites-container">
+  <main class="favorites wrapper">
+    <h3 class="favorites__subtitle subtitle" data-aos="fade-left">
+      Главная ⸺
+      <span class="subtitle__pseudo subtitle__pseudo--favorites">Избранное</span>
+    </h3>
+
+    <section class="favorites__box" data-aos="fade-down">
+      <h1 class="favorites__title title">Избранные товары</h1>
+
+      <p class="favorites__amount">
+        Добавлено в избанное позиций:
+        <span class="favorites__count">85</span>
+      </p>
+
+      <p class="favorites__results quantity">
+        <label for="favorites__number" class="favorites__label favorites__label--number">Показать результатов:</label>
+        <input type="number" class="favorites__number quantity__item" id="favorites__number" value="12" name="favorites__value">
+      </p>
+
+      <table class="favorites__table">
+        <caption class="visually-hidden">Характеристики товара</caption>
+        <thead class="favorites__header">
+          <tr class="favorites__row favorites__row--header">
+            <th class="favorites__cell favorites__cell--number favorites__cell--header">
+              <p class="favorites__description">№</p>
+            </th>
+            <th class="favorites__cell favorites__cell--photo favorites__cell--header">
+              <p class="favorites__description">Фото</p>
+            </th>
+            <th class="favorites__cell favorites__cell--name favorites__cell--header">
+              <p class="favorites__description">Название</p>
+            </th>
+            <th class="favorites__cell favorites__cell--quantity favorites__cell--header">
+              <p class="favorites__description">Количество (шт.)</p>
+            </th>
+            <th class="favorites__cell favorites__cell--height favorites__cell--header">
+              <p class="favorites__description">Высота (см.)</p>
+            </th>
+            <th class="favorites__cell favorites__cell--width favorites__cell--header">
+              <p class="favorites__description">Ширина (см.)</p>
+            </th>
+            <th class="favorites__cell favorites__cell--depth favorites__cell--header">
+              <p class="favorites__description">Глубина (см.)</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="favorites__body">
+          <tr class="favorites__row">
+            <th class="favorites__cell favorites__cell--number">1</th>
+            <th class="favorites__cell favorites__cell--photo">
+              <a href="#" class="favorites__table-link">
+                <picture class="favorites__picture">
+                  <source type="image/webp" srcset="img/main/favorites/photo-1.webp">
+                  <img src="img/main/favorites/photo-1.jpg" alt="Photo 1" class="favorites__photo">
+                </picture>
+              </a>
+            </th>
+            <th class="favorites__cell favorites__cell--name">
+              <label for="favorites__value-1" class="favorites__table-label">NOSTRUD EXERCI TATION ULLAMCORPER SUSCIPIT</label>
+            </th>
+            <th class="favorites__cell favorites__cell--quantity">
+              <p class="favorites__table-quantity quantity">
+                <input type="number" class="favorites__table-input quantity__item" id="favorites__value-1" value="12" name="favorites__value">
+              </p>
+            </th>
+            <th class="favorites__cell favorites__cell--height">
+              <p class="favorites__sizes favorites__sizes--height">105</p>
+            </th>
+            <th class="favorites__cell favorites__cell--width">
+              <p class="favorites__sizes favorites__sizes--width">80</p>
+            </th>
+            <th class="favorites__cell favorites__cell--depth">
+              <p class="favorites__sizes favorites__sizes--depth">60</p>
+            </th>
+          </tr>
+          <tr class="favorites__row">
+            <th class="favorites__cell favorites__cell--number">2</th>
+            <th class="favorites__cell favorites__cell--photo">
+              <a href="#" class="favorites__table-link favorites__table-link--2">
+                <picture class="favorites__picture">
+                  <source type="image/webp" srcset="img/main/favorites/photo-2.webp">
+                  <img src="img/main/favorites/photo-2.jpg" alt="Photo 2" class="favorites__photo">
+                </picture>
+
+                <div class="favorites__hover-box favorites__hover-box--2">
+                  <picture class="favorites__picture-hover">
+                    <source type="image/webp" srcset="img/main/favorites/photo-2.webp">
+                    <img src="img/main/favorites/photo-2.jpg" alt="Photo 2" class="favorites__photo-hover">
+                  </picture>
+                  <ul class="favorites__description-hover">
+                    <li class="favorites__item-hover">
+                      <picture class="favorites__picture-color">
+                        <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
+                        <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
+                      </picture>
+                      <p class="favorites__description-color">Цвет метала</p>
+                    </li>
+                    <li class="favorites__item-hover">
+                      <picture class="favorites__picture-color">
+                        <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
+                        <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
+                      </picture>
+                      <p class="favorites__description-color">Цвет дерева</p>
+                    </li>
+                    <li class="favorites__item-hover">
+                      <picture class="favorites__picture-color">
+                        <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
+                        <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
+                      </picture>
+                      <p class="favorites__description-color">Профиль</p>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </th>
+            <th class="favorites__cell favorites__cell--name">
+              <label for="favorites__value-2" class="favorites__table-label">EUISMOD TINCIDUNT UT LAOREET</label>
+            </th>
+            <th class="favorites__cell favorites__cell--quantity">
+              <p class="favorites__table-quantity quantity">
+                <input type="number" class="favorites__table-input quantity__item" id="favorites__value-2" value="12" name="favorites__value">
+              </p>
+            </th>
+            <th class="favorites__cell favorites__cell--height">
+              <p class="favorites__sizes favorites__sizes--height">100</p>
+            </th>
+            <th class="favorites__cell favorites__cell--width">
+              <p class="favorites__sizes favorites__sizes--width">75</p>
+            </th>
+            <th class="favorites__cell favorites__cell--depth">
+              <p class="favorites__sizes favorites__sizes--depth">50</p>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+  </main>
+</div>
+
+<include src="src/posthtml/blocks/_footer.html"></include>
+
+<!--JS-->
+<script src="libs/jquery-3.5.1.min.js"></script>
+<script src="js/plugins/aos.js"></script>
+<script src="js/plugins/tiny-slider.js"></script>
+<script src="js/plugins/number.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1500
+  });
+
+  objectFitImages();
+</script>
+
+</body>
+</html>

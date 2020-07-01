@@ -22,6 +22,12 @@
   &--news {
     margin-left: 15px;
   }
+
+  &--favorites {
+    @include before-clean {
+      left: -10px;
+    }
+  }
 }
 
 //Tablet
