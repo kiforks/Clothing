@@ -5,3 +5,11 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+
+//Mobile
+@include mobile {
+  .title {
+    font-size: 26px;
+    line-height: 120%;
+  }
+}

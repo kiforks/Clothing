@@ -1,5 +1,6 @@
 .subtitle {
   @include reset-margin-text;
+  margin-bottom: 69px;
   font-size: 17px;
   line-height: 20px;
   font-weight: normal;
@@ -20,5 +21,28 @@
 
   &--news {
     margin-left: 15px;
+  }
+}
+
+//Tablet
+@include tablet {
+  .subtitle {
+    margin-bottom: 25px;
+  }
+}
+
+//Mobile
+@include mobile {
+  .subtitle {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  .subtitle__pseudo {
+    @include before-clean {
+      height: 10px;
+      bottom: -2px;
+    }
   }
 }

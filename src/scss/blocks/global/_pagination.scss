@@ -1,0 +1,134 @@
+.pagination {
+  @include flex;
+  align-items: center;
+  //justify-content: space-between;
+  width: 585px;
+  @include reset-list;
+  margin-left: 326px;
+  font-size: 35px;
+  line-height: 42px;
+  color: $black;
+}
+
+.pagination__item {
+  margin-right: 65px;
+  @include hover-opacity;
+  @include active-opacity;
+  @include transition;
+
+  &--arrow {
+    margin-left: 0;
+    margin-right: 0;
+    width: 40px;
+    height: 12px;
+    @include hover-opacity;
+    @include active-opacity;
+  }
+
+  &--prev {
+    margin-right: 50px;
+  }
+
+  &--next {
+    margin-right: 0;
+  }
+
+  &--last {
+    margin-right: 46px;
+  }
+
+  &--active {
+    position: relative;
+    font-weight: 900;
+    cursor: default;
+    @include hover {
+      opacity: 1;
+    }
+    @include active {
+      opacity: 1;
+    }
+    @include before {
+      bottom: -2px;
+      left: 0;
+      width: 19px;
+      height: 5px;
+      background-color: $black;
+    }
+  }
+
+  &--penultimate {
+    margin-right: 32px;
+  }
+
+  &--points {
+    margin-right: 26px;
+    cursor: default;
+    @include hover {
+      opacity: 1;
+    }
+    @include active {
+      opacity: 1;
+    }
+  }
+}
+
+.pagination__link {
+  &--arrow {
+    display: block;
+    height: 16px;
+    background-image: url('../img/svg/pagination-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top -14px left;
+  }
+
+  &--prev {
+    background-position: top -10px left;
+    transform: rotate(180deg);
+  }
+}
+
+.pagination__points {
+  position: relative;
+  font-weight: 900;
+  @include before {
+    left: 0;
+    bottom: 0;
+    width: 24px;
+    height: 1px;
+    background-color: $black;
+    @include center-transform-horizon;
+  }
+}
+
+//Tablet
+@include tablet {
+  .pagination {
+    @include center-margin;
+  }
+}
+
+//Mobile
+@include mobile {
+  .pagination {
+    justify-content: space-between;
+    width: 100%;
+    font-size: 23px;
+    line-height: 120%;
+  }
+
+  .pagination__item {
+    margin: 0;
+
+    &--points {
+      margin-left: -8px;
+      margin-right: -8px;
+    }
+
+    &--active {
+      @include before-clean {
+        left: -3px;
+      }
+    }
+  }
+}
