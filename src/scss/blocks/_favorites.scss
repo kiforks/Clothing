@@ -71,6 +71,7 @@
   border-collapse: collapse;
   text-transform: none;
   margin-bottom: 79px;
+  overflow: scroll;
 
   .quantity-nav {
     right: 23px;
@@ -288,21 +289,62 @@
 
 //Mobile
 @include mobile {
+  .favorites {
+    .quantity-nav {
+      left: auto;
+      top: 0;
+      right: 0;
+    }
+  }
+
   .favorites__table {
-    @include flex-column;
+    font-size: 14px;
+    line-height: 120%;
+
+    .quantity-nav {
+      top: 0;
+    }
+  }
+
+  .favorites__sizes {
+    font-size: 23px;
+    line-height: 120%;
   }
 
   .favorites__header {
-    @include flex-column;
+    font-size: 12px;
+    line-height: 120%;
+  }
+
+  .favorites__inner {
+    overflow-x: scroll;
+  }
+
+  .favorites__cell {
+    &--name {
+      @include padding-horizon(10px);
+    }
+
+    &--number {
+      font-size: 16px;
+      line-height: 120%;
+    }
+  }
+
+  .favorites__amount {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  .favorites__results {
+    justify-content: space-between;
     width: 100%;
   }
 
-  .favorites__body {
-    @include flex-column;
-    width: 100%;
-  }
-
-  .favorites__row {
-    @include flex-column;
+  .favorites__label {
+    font-size: 14px;
+    line-height: 120%;
   }
 }

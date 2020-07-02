@@ -68,4 +68,8 @@ selectorToggle('video__button', 'video__button');
 selectorToggle('video-overlay', 'video__button');
 selectorToggle('video__box', 'video__button');
 selectorToggle('body', 'video__button');
+selectorToggle('sections__modal', 'sections__picture');
+selectorToggle('sections__modal', 'sections__modal-button');
+
+
 

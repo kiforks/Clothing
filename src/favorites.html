@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="UTF-8">
-  <title>Project</title>
+  <title>Избранное</title>
   <link rel="stylesheet" href="css/style.min.css">
   <!--  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/*.png">-->
   <include src="src/posthtml/templates/fonts.html"></include>
@@ -24,7 +24,7 @@
     <section class="favorites__box" data-aos="fade-down">
       <h1 class="favorites__title title">Избранные товары</h1>
 
-      <p class="favorites__amount">
+      <p class="favorites__amount">5
         Добавлено в избанное позиций:
         <span class="favorites__count">85</span>
       </p>
@@ -34,736 +34,738 @@
         <input type="number" class="favorites__number quantity__item" id="favorites__number" value="12" name="favorites__value">
       </p>
 
-      <table class="favorites__table">
-        <caption class="visually-hidden">Характеристики товара</caption>
-        <thead class="favorites__header">
-          <tr class="favorites__row favorites__row--header">
-            <th class="favorites__cell favorites__cell--number favorites__cell--header">
-              <p class="favorites__description">№</p>
-            </th>
-            <th class="favorites__cell favorites__cell--photo favorites__cell--header">
-              <p class="favorites__description">Фото</p>
-            </th>
-            <th class="favorites__cell favorites__cell--name favorites__cell--header">
-              <p class="favorites__description">Название</p>
-            </th>
-            <th class="favorites__cell favorites__cell--quantity favorites__cell--header">
-              <p class="favorites__description">Количество (шт.)</p>
-            </th>
-            <th class="favorites__cell favorites__cell--height favorites__cell--header">
-              <p class="favorites__description">Высота (см.)</p>
-            </th>
-            <th class="favorites__cell favorites__cell--width favorites__cell--header">
-              <p class="favorites__description">Ширина (см.)</p>
-            </th>
-            <th class="favorites__cell favorites__cell--depth favorites__cell--header">
-              <p class="favorites__description">Глубина (см.)</p>
-            </th>
-          </tr>
-        </thead>
-        <tbody class="favorites__body">
-          <tr class="favorites__row">
-            <td class="favorites__cell favorites__cell--number">1</td>
-            <td class="favorites__cell favorites__cell--photo">
-              <a href="#" class="favorites__table-link">
-                <picture class="favorites__picture">
-                  <source type="image/webp" srcset="img/main/favorites/photo-1.webp">
-                  <img src="img/main/favorites/photo-1.png" alt="Photo 1" class="favorites__photo">
-                </picture>
-                <div class="favorites__hover-box">
-                  <picture class="favorites__picture-hover">
+      <div class="favorites__inner">
+        <table class="favorites__table">
+          <caption class="visually-hidden">Характеристики товара</caption>
+          <thead class="favorites__header">
+            <tr class="favorites__row favorites__row--header">
+              <th class="favorites__cell favorites__cell--number favorites__cell--header">
+                <p class="favorites__description">№</p>
+              </th>
+              <th class="favorites__cell favorites__cell--photo favorites__cell--header">
+                <p class="favorites__description">Фото</p>
+              </th>
+              <th class="favorites__cell favorites__cell--name favorites__cell--header">
+                <p class="favorites__description">Название</p>
+              </th>
+              <th class="favorites__cell favorites__cell--quantity favorites__cell--header">
+                <p class="favorites__description">Количество (шт.)</p>
+              </th>
+              <th class="favorites__cell favorites__cell--height favorites__cell--header">
+                <p class="favorites__description">Высота (см.)</p>
+              </th>
+              <th class="favorites__cell favorites__cell--width favorites__cell--header">
+                <p class="favorites__description">Ширина (см.)</p>
+              </th>
+              <th class="favorites__cell favorites__cell--depth favorites__cell--header">
+                <p class="favorites__description">Глубина (см.)</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="favorites__body">
+            <tr class="favorites__row">
+              <td class="favorites__cell favorites__cell--number">1</td>
+              <td class="favorites__cell favorites__cell--photo">
+                <a href="#" class="favorites__table-link">
+                  <picture class="favorites__picture">
                     <source type="image/webp" srcset="img/main/favorites/photo-1.webp">
-                    <img src="img/main/favorites/photo-1.png" alt="Photo 1" class="favorites__photo-hover">
+                    <img src="img/main/favorites/photo-1.png" alt="Photo 1" class="favorites__photo">
                   </picture>
-                  <ul class="favorites__description-hover">
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
-                        <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет метала</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
-                        <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет дерева</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
-                        <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Профиль</p>
-                    </li>
-                  </ul>
-                </div>
-              </a>
-            </td>
-            <td class="favorites__cell favorites__cell--name">
-              <label for="favorites__value-1" class="favorites__table-label">NOSTRUD EXERCI TATION ULLAMCORPER SUSCIPIT</label>
-            </td>
-            <td class="favorites__cell favorites__cell--quantity">
-              <p class="favorites__table-quantity quantity">
-                <input type="number" class="favorites__table-input quantity__item" id="favorites__value-1" value="2" name="favorites__value">
-              </p>
-            </td>
-            <td class="favorites__cell favorites__cell--height">
-              <p class="favorites__sizes favorites__sizes--height">105</p>
-            </td>
-            <td class="favorites__cell favorites__cell--width">
-              <p class="favorites__sizes favorites__sizes--width">80</p>
-            </td>
-            <td class="favorites__cell favorites__cell--depth">
-              <p class="favorites__sizes favorites__sizes--depth">60</p>
-            </td>
-          </tr>
-          <tr class="favorites__row">
-            <td class="favorites__cell favorites__cell--number">2</td>
-            <td class="favorites__cell favorites__cell--photo">
-              <a href="#" class="favorites__table-link">
-                <picture class="favorites__picture">
-                  <source type="image/webp" srcset="img/main/favorites/photo-2.webp">
-                  <img src="img/main/favorites/photo-2.png" alt="Photo 2" class="favorites__photo">
-                </picture>
-
-                <div class="favorites__hover-box">
-                  <picture class="favorites__picture-hover">
+                  <div class="favorites__hover-box">
+                    <picture class="favorites__picture-hover">
+                      <source type="image/webp" srcset="img/main/favorites/photo-1.webp">
+                      <img src="img/main/favorites/photo-1.png" alt="Photo 1" class="favorites__photo-hover">
+                    </picture>
+                    <ul class="favorites__description-hover">
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
+                          <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет метала</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
+                          <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет дерева</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
+                          <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Профиль</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </td>
+              <td class="favorites__cell favorites__cell--name">
+                <label for="favorites__value-1" class="favorites__table-label">NOSTRUD EXERCI TATION ULLAMCORPER SUSCIPIT</label>
+              </td>
+              <td class="favorites__cell favorites__cell--quantity">
+                <p class="favorites__table-quantity quantity">
+                  <input type="number" class="favorites__table-input quantity__item" id="favorites__value-1" value="2" name="favorites__value">
+                </p>
+              </td>
+              <td class="favorites__cell favorites__cell--height">
+                <p class="favorites__sizes favorites__sizes--height">105</p>
+              </td>
+              <td class="favorites__cell favorites__cell--width">
+                <p class="favorites__sizes favorites__sizes--width">80</p>
+              </td>
+              <td class="favorites__cell favorites__cell--depth">
+                <p class="favorites__sizes favorites__sizes--depth">60</p>
+              </td>
+            </tr>
+            <tr class="favorites__row">
+              <td class="favorites__cell favorites__cell--number">2</td>
+              <td class="favorites__cell favorites__cell--photo">
+                <a href="#" class="favorites__table-link">
+                  <picture class="favorites__picture">
                     <source type="image/webp" srcset="img/main/favorites/photo-2.webp">
-                    <img src="img/main/favorites/photo-2.png" alt="Photo 2" class="favorites__photo-hover">
+                    <img src="img/main/favorites/photo-2.png" alt="Photo 2" class="favorites__photo">
                   </picture>
-                  <ul class="favorites__description-hover">
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
-                        <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет метала</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
-                        <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет дерева</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
-                        <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Профиль</p>
-                    </li>
-                  </ul>
-                </div>
-              </a>
-            </td>
-            <td class="favorites__cell favorites__cell--name">
-              <label for="favorites__value-2" class="favorites__table-label">EUISMOD TINCIDUNT UT LAOREET</label>
-            </td>
-            <td class="favorites__cell favorites__cell--quantity">
-              <p class="favorites__table-quantity quantity">
-                <input type="number" class="favorites__table-input quantity__item" id="favorites__value-2" value="1" name="favorites__value">
-              </p>
-            </td>
-            <td class="favorites__cell favorites__cell--height">
-              <p class="favorites__sizes favorites__sizes--height">100</p>
-            </td>
-            <td class="favorites__cell favorites__cell--width">
-              <p class="favorites__sizes favorites__sizes--width">75</p>
-            </td>
-            <td class="favorites__cell favorites__cell--depth">
-              <p class="favorites__sizes favorites__sizes--depth">50</p>
-            </td>
-          </tr>
-          <tr class="favorites__row">
-            <td class="favorites__cell favorites__cell--number">3</td>
-            <td class="favorites__cell favorites__cell--photo">
-              <a href="#" class="favorites__table-link">
-                <picture class="favorites__picture">
-                  <source type="image/webp" srcset="img/main/favorites/photo-5.webp">
-                  <img src="img/main/favorites/photo-5.png" alt="Photo 3" class="favorites__photo">
-                </picture>
 
-                <div class="favorites__hover-box">
-                  <picture class="favorites__picture-hover">
+                  <div class="favorites__hover-box">
+                    <picture class="favorites__picture-hover">
+                      <source type="image/webp" srcset="img/main/favorites/photo-2.webp">
+                      <img src="img/main/favorites/photo-2.png" alt="Photo 2" class="favorites__photo-hover">
+                    </picture>
+                    <ul class="favorites__description-hover">
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
+                          <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет метала</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
+                          <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет дерева</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
+                          <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Профиль</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </td>
+              <td class="favorites__cell favorites__cell--name">
+                <label for="favorites__value-2" class="favorites__table-label">EUISMOD TINCIDUNT UT LAOREET</label>
+              </td>
+              <td class="favorites__cell favorites__cell--quantity">
+                <p class="favorites__table-quantity quantity">
+                  <input type="number" class="favorites__table-input quantity__item" id="favorites__value-2" value="1" name="favorites__value">
+                </p>
+              </td>
+              <td class="favorites__cell favorites__cell--height">
+                <p class="favorites__sizes favorites__sizes--height">100</p>
+              </td>
+              <td class="favorites__cell favorites__cell--width">
+                <p class="favorites__sizes favorites__sizes--width">75</p>
+              </td>
+              <td class="favorites__cell favorites__cell--depth">
+                <p class="favorites__sizes favorites__sizes--depth">50</p>
+              </td>
+            </tr>
+            <tr class="favorites__row">
+              <td class="favorites__cell favorites__cell--number">3</td>
+              <td class="favorites__cell favorites__cell--photo">
+                <a href="#" class="favorites__table-link">
+                  <picture class="favorites__picture">
                     <source type="image/webp" srcset="img/main/favorites/photo-5.webp">
-                    <img src="img/main/favorites/photo-5.png" alt="Photo 3" class="favorites__photo-hover">
+                    <img src="img/main/favorites/photo-5.png" alt="Photo 3" class="favorites__photo">
                   </picture>
-                  <ul class="favorites__description-hover">
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
-                        <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет метала</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
-                        <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет дерева</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
-                        <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Профиль</p>
-                    </li>
-                  </ul>
-                </div>
-              </a>
-            </td>
-            <td class="favorites__cell favorites__cell--name">
-              <label for="favorites__value-3" class="favorites__table-label">EUISMOD TINCIDUNT UT LAOREET
-                DOLORE MAGNA</label>
-            </td>
-            <td class="favorites__cell favorites__cell--quantity">
-              <p class="favorites__table-quantity quantity">
-                <input type="number" class="favorites__table-input quantity__item" id="favorites__value-3" value="2" name="favorites__value">
-              </p>
-            </td>
-            <td class="favorites__cell favorites__cell--height">
-              <p class="favorites__sizes favorites__sizes--height">120</p>
-            </td>
-            <td class="favorites__cell favorites__cell--width">
-              <p class="favorites__sizes favorites__sizes--width">90</p>
-            </td>
-            <td class="favorites__cell favorites__cell--depth">
-              <p class="favorites__sizes favorites__sizes--depth">60</p>
-            </td>
-          </tr>
-          <tr class="favorites__row">
-            <td class="favorites__cell favorites__cell--number">4</td>
-            <td class="favorites__cell favorites__cell--photo">
-              <a href="#" class="favorites__table-link">
-                <picture class="favorites__picture">
-                  <source type="image/webp" srcset="img/main/favorites/photo-5.webp">
-                  <img src="img/main/favorites/photo-5.png" alt="Photo 4" class="favorites__photo">
-                </picture>
 
-                <div class="favorites__hover-box">
-                  <picture class="favorites__picture-hover">
+                  <div class="favorites__hover-box">
+                    <picture class="favorites__picture-hover">
+                      <source type="image/webp" srcset="img/main/favorites/photo-5.webp">
+                      <img src="img/main/favorites/photo-5.png" alt="Photo 3" class="favorites__photo-hover">
+                    </picture>
+                    <ul class="favorites__description-hover">
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
+                          <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет метала</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
+                          <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет дерева</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
+                          <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Профиль</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </td>
+              <td class="favorites__cell favorites__cell--name">
+                <label for="favorites__value-3" class="favorites__table-label">EUISMOD TINCIDUNT UT LAOREET
+                  DOLORE MAGNA</label>
+              </td>
+              <td class="favorites__cell favorites__cell--quantity">
+                <p class="favorites__table-quantity quantity">
+                  <input type="number" class="favorites__table-input quantity__item" id="favorites__value-3" value="2" name="favorites__value">
+                </p>
+              </td>
+              <td class="favorites__cell favorites__cell--height">
+                <p class="favorites__sizes favorites__sizes--height">120</p>
+              </td>
+              <td class="favorites__cell favorites__cell--width">
+                <p class="favorites__sizes favorites__sizes--width">90</p>
+              </td>
+              <td class="favorites__cell favorites__cell--depth">
+                <p class="favorites__sizes favorites__sizes--depth">60</p>
+              </td>
+            </tr>
+            <tr class="favorites__row">
+              <td class="favorites__cell favorites__cell--number">4</td>
+              <td class="favorites__cell favorites__cell--photo">
+                <a href="#" class="favorites__table-link">
+                  <picture class="favorites__picture">
                     <source type="image/webp" srcset="img/main/favorites/photo-5.webp">
-                    <img src="img/main/favorites/photo-5.png" alt="Photo 4" class="favorites__photo-hover">
+                    <img src="img/main/favorites/photo-5.png" alt="Photo 4" class="favorites__photo">
                   </picture>
-                  <ul class="favorites__description-hover">
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
-                        <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет метала</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
-                        <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет дерева</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
-                        <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Профиль</p>
-                    </li>
-                  </ul>
-                </div>
-              </a>
-            </td>
-            <td class="favorites__cell favorites__cell--name">
-              <label for="favorites__value-4" class="favorites__table-label">ENIM AD MINIM VENIAM, QUIS NOSTRUD</label>
-            </td>
-            <td class="favorites__cell favorites__cell--quantity">
-              <p class="favorites__table-quantity quantity">
-                <input type="number" class="favorites__table-input quantity__item" id="favorites__value-4" value="1" name="favorites__value">
-              </p>
-            </td>
-            <td class="favorites__cell favorites__cell--height">
-              <p class="favorites__sizes favorites__sizes--height">105</p>
-            </td>
-            <td class="favorites__cell favorites__cell--width">
-              <p class="favorites__sizes favorites__sizes--width">85</p>
-            </td>
-            <td class="favorites__cell favorites__cell--depth">
-              <p class="favorites__sizes favorites__sizes--depth">40</p>
-            </td>
-          </tr>
-          <tr class="favorites__row">
-            <td class="favorites__cell favorites__cell--number">5</td>
-            <td class="favorites__cell favorites__cell--photo">
-              <a href="#" class="favorites__table-link">
-                <picture class="favorites__picture">
-                  <source type="image/webp" srcset="img/main/favorites/photo-5.webp">
-                  <img src="img/main/favorites/photo-5.png" alt="Photo 5" class="favorites__photo">
-                </picture>
 
-                <div class="favorites__hover-box">
-                  <picture class="favorites__picture-hover">
+                  <div class="favorites__hover-box">
+                    <picture class="favorites__picture-hover">
+                      <source type="image/webp" srcset="img/main/favorites/photo-5.webp">
+                      <img src="img/main/favorites/photo-5.png" alt="Photo 4" class="favorites__photo-hover">
+                    </picture>
+                    <ul class="favorites__description-hover">
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
+                          <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет метала</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
+                          <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет дерева</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
+                          <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Профиль</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </td>
+              <td class="favorites__cell favorites__cell--name">
+                <label for="favorites__value-4" class="favorites__table-label">ENIM AD MINIM VENIAM, QUIS NOSTRUD</label>
+              </td>
+              <td class="favorites__cell favorites__cell--quantity">
+                <p class="favorites__table-quantity quantity">
+                  <input type="number" class="favorites__table-input quantity__item" id="favorites__value-4" value="1" name="favorites__value">
+                </p>
+              </td>
+              <td class="favorites__cell favorites__cell--height">
+                <p class="favorites__sizes favorites__sizes--height">105</p>
+              </td>
+              <td class="favorites__cell favorites__cell--width">
+                <p class="favorites__sizes favorites__sizes--width">85</p>
+              </td>
+              <td class="favorites__cell favorites__cell--depth">
+                <p class="favorites__sizes favorites__sizes--depth">40</p>
+              </td>
+            </tr>
+            <tr class="favorites__row">
+              <td class="favorites__cell favorites__cell--number">5</td>
+              <td class="favorites__cell favorites__cell--photo">
+                <a href="#" class="favorites__table-link">
+                  <picture class="favorites__picture">
                     <source type="image/webp" srcset="img/main/favorites/photo-5.webp">
-                    <img src="img/main/favorites/photo-5.png" alt="Photo 5" class="favorites__photo-hover">
+                    <img src="img/main/favorites/photo-5.png" alt="Photo 5" class="favorites__photo">
                   </picture>
-                  <ul class="favorites__description-hover">
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
-                        <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет метала</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
-                        <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет дерева</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
-                        <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Профиль</p>
-                    </li>
-                  </ul>
-                </div>
-              </a>
-            </td>
-            <td class="favorites__cell favorites__cell--name">
-              <label for="favorites__value-5" class="favorites__table-label">NOSTRUD EXERCI TATION ULLAMCORPER
-                SUSCIPIT </label>
-            </td>
-            <td class="favorites__cell favorites__cell--quantity">
-              <p class="favorites__table-quantity quantity">
-                <input type="number" class="favorites__table-input quantity__item" id="favorites__value-5" value="2" name="favorites__value">
-              </p>
-            </td>
-            <td class="favorites__cell favorites__cell--height">
-              <p class="favorites__sizes favorites__sizes--height">112</p>
-            </td>
-            <td class="favorites__cell favorites__cell--width">
-              <p class="favorites__sizes favorites__sizes--width">80</p>
-            </td>
-            <td class="favorites__cell favorites__cell--depth">
-              <p class="favorites__sizes favorites__sizes--depth">70</p>
-            </td>
-          </tr>
-          <tr class="favorites__row">
-            <td class="favorites__cell favorites__cell--number">6</td>
-            <td class="favorites__cell favorites__cell--photo">
-              <a href="#" class="favorites__table-link">
-                <picture class="favorites__picture">
-                  <source type="image/webp" srcset="img/main/favorites/photo-6.webp">
-                  <img src="img/main/favorites/photo-6.png" alt="Photo 6" class="favorites__photo">
-                </picture>
 
-                <div class="favorites__hover-box">
-                  <picture class="favorites__picture-hover">
+                  <div class="favorites__hover-box">
+                    <picture class="favorites__picture-hover">
+                      <source type="image/webp" srcset="img/main/favorites/photo-5.webp">
+                      <img src="img/main/favorites/photo-5.png" alt="Photo 5" class="favorites__photo-hover">
+                    </picture>
+                    <ul class="favorites__description-hover">
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
+                          <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет метала</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
+                          <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет дерева</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
+                          <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Профиль</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </td>
+              <td class="favorites__cell favorites__cell--name">
+                <label for="favorites__value-5" class="favorites__table-label">NOSTRUD EXERCI TATION ULLAMCORPER
+                  SUSCIPIT </label>
+              </td>
+              <td class="favorites__cell favorites__cell--quantity">
+                <p class="favorites__table-quantity quantity">
+                  <input type="number" class="favorites__table-input quantity__item" id="favorites__value-5" value="2" name="favorites__value">
+                </p>
+              </td>
+              <td class="favorites__cell favorites__cell--height">
+                <p class="favorites__sizes favorites__sizes--height">112</p>
+              </td>
+              <td class="favorites__cell favorites__cell--width">
+                <p class="favorites__sizes favorites__sizes--width">80</p>
+              </td>
+              <td class="favorites__cell favorites__cell--depth">
+                <p class="favorites__sizes favorites__sizes--depth">70</p>
+              </td>
+            </tr>
+            <tr class="favorites__row">
+              <td class="favorites__cell favorites__cell--number">6</td>
+              <td class="favorites__cell favorites__cell--photo">
+                <a href="#" class="favorites__table-link">
+                  <picture class="favorites__picture">
                     <source type="image/webp" srcset="img/main/favorites/photo-6.webp">
-                    <img src="img/main/favorites/photo-6.png" alt="Photo 6" class="favorites__photo-hover">
+                    <img src="img/main/favorites/photo-6.png" alt="Photo 6" class="favorites__photo">
                   </picture>
-                  <ul class="favorites__description-hover">
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
-                        <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет метала</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
-                        <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет дерева</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
-                        <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Профиль</p>
-                    </li>
-                  </ul>
-                </div>
-              </a>
-            </td>
-            <td class="favorites__cell favorites__cell--name">
-              <label for="favorites__value-6" class="favorites__table-label">EUISMOD TINCIDUNT UT LAOREET</label>
-            </td>
-            <td class="favorites__cell favorites__cell--quantity">
-              <p class="favorites__table-quantity quantity">
-                <input type="number" class="favorites__table-input quantity__item" id="favorites__value-6" value="1" name="favorites__value">
-              </p>
-            </td>
-            <td class="favorites__cell favorites__cell--height">
-              <p class="favorites__sizes favorites__sizes--height">100</p>
-            </td>
-            <td class="favorites__cell favorites__cell--width">
-              <p class="favorites__sizes favorites__sizes--width">90</p>
-            </td>
-            <td class="favorites__cell favorites__cell--depth">
-              <p class="favorites__sizes favorites__sizes--depth">60</p>
-            </td>
-          </tr>
-          <tr class="favorites__row">
-            <td class="favorites__cell favorites__cell--number">7</td>
-            <td class="favorites__cell favorites__cell--photo">
-              <a href="#" class="favorites__table-link">
-                <picture class="favorites__picture">
-                  <source type="image/webp" srcset="img/main/favorites/photo-7.webp">
-                  <img src="img/main/favorites/photo-7.png" alt="Photo 7" class="favorites__photo">
-                </picture>
-                <div class="favorites__hover-box">
-                  <picture class="favorites__picture-hover">
-                    <source type="image/webp" srcset="img/main/favorites/photo-7.webp">
-                    <img src="img/main/favorites/photo-7.png" alt="Photo 7" class="favorites__photo-hover">
-                  </picture>
-                  <ul class="favorites__description-hover">
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
-                        <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет метала</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
-                        <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет дерева</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
-                        <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Профиль</p>
-                    </li>
-                  </ul>
-                </div>
-              </a>
-            </td>
-            <td class="favorites__cell favorites__cell--name">
-              <label for="favorites__value-7" class="favorites__table-label">MINIM VENIAM QUIS NOSTRUD</label>
-            </td>
-            <td class="favorites__cell favorites__cell--quantity">
-              <p class="favorites__table-quantity quantity">
-                <input type="number" class="favorites__table-input quantity__item" id="favorites__value-7" value="2" name="favorites__value">
-              </p>
-            </td>
-            <td class="favorites__cell favorites__cell--height">
-              <p class="favorites__sizes favorites__sizes--height">115</p>
-            </td>
-            <td class="favorites__cell favorites__cell--width">
-              <p class="favorites__sizes favorites__sizes--width">80</p>
-            </td>
-            <td class="favorites__cell favorites__cell--depth">
-              <p class="favorites__sizes favorites__sizes--depth">60</p>
-            </td>
-          </tr>
-          <tr class="favorites__row">
-            <td class="favorites__cell favorites__cell--number">8</td>
-            <td class="favorites__cell favorites__cell--photo">
-              <a href="#" class="favorites__table-link">
-                <picture class="favorites__picture">
-                  <source type="image/webp" srcset="img/main/favorites/photo-8.webp">
-                  <img src="img/main/favorites/photo-8.png" alt="Photo 8" class="favorites__photo">
-                </picture>
 
-                <div class="favorites__hover-box">
-                  <picture class="favorites__picture-hover">
+                  <div class="favorites__hover-box">
+                    <picture class="favorites__picture-hover">
+                      <source type="image/webp" srcset="img/main/favorites/photo-6.webp">
+                      <img src="img/main/favorites/photo-6.png" alt="Photo 6" class="favorites__photo-hover">
+                    </picture>
+                    <ul class="favorites__description-hover">
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
+                          <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет метала</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
+                          <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет дерева</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
+                          <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Профиль</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </td>
+              <td class="favorites__cell favorites__cell--name">
+                <label for="favorites__value-6" class="favorites__table-label">EUISMOD TINCIDUNT UT LAOREET</label>
+              </td>
+              <td class="favorites__cell favorites__cell--quantity">
+                <p class="favorites__table-quantity quantity">
+                  <input type="number" class="favorites__table-input quantity__item" id="favorites__value-6" value="1" name="favorites__value">
+                </p>
+              </td>
+              <td class="favorites__cell favorites__cell--height">
+                <p class="favorites__sizes favorites__sizes--height">100</p>
+              </td>
+              <td class="favorites__cell favorites__cell--width">
+                <p class="favorites__sizes favorites__sizes--width">90</p>
+              </td>
+              <td class="favorites__cell favorites__cell--depth">
+                <p class="favorites__sizes favorites__sizes--depth">60</p>
+              </td>
+            </tr>
+            <tr class="favorites__row">
+              <td class="favorites__cell favorites__cell--number">7</td>
+              <td class="favorites__cell favorites__cell--photo">
+                <a href="#" class="favorites__table-link">
+                  <picture class="favorites__picture">
+                    <source type="image/webp" srcset="img/main/favorites/photo-7.webp">
+                    <img src="img/main/favorites/photo-7.png" alt="Photo 7" class="favorites__photo">
+                  </picture>
+                  <div class="favorites__hover-box">
+                    <picture class="favorites__picture-hover">
+                      <source type="image/webp" srcset="img/main/favorites/photo-7.webp">
+                      <img src="img/main/favorites/photo-7.png" alt="Photo 7" class="favorites__photo-hover">
+                    </picture>
+                    <ul class="favorites__description-hover">
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
+                          <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет метала</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
+                          <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет дерева</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
+                          <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Профиль</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </td>
+              <td class="favorites__cell favorites__cell--name">
+                <label for="favorites__value-7" class="favorites__table-label">MINIM VENIAM QUIS NOSTRUD</label>
+              </td>
+              <td class="favorites__cell favorites__cell--quantity">
+                <p class="favorites__table-quantity quantity">
+                  <input type="number" class="favorites__table-input quantity__item" id="favorites__value-7" value="2" name="favorites__value">
+                </p>
+              </td>
+              <td class="favorites__cell favorites__cell--height">
+                <p class="favorites__sizes favorites__sizes--height">115</p>
+              </td>
+              <td class="favorites__cell favorites__cell--width">
+                <p class="favorites__sizes favorites__sizes--width">80</p>
+              </td>
+              <td class="favorites__cell favorites__cell--depth">
+                <p class="favorites__sizes favorites__sizes--depth">60</p>
+              </td>
+            </tr>
+            <tr class="favorites__row">
+              <td class="favorites__cell favorites__cell--number">8</td>
+              <td class="favorites__cell favorites__cell--photo">
+                <a href="#" class="favorites__table-link">
+                  <picture class="favorites__picture">
                     <source type="image/webp" srcset="img/main/favorites/photo-8.webp">
-                    <img src="img/main/favorites/photo-8.png" alt="Photo 8" class="favorites__photo-hover">
+                    <img src="img/main/favorites/photo-8.png" alt="Photo 8" class="favorites__photo">
                   </picture>
-                  <ul class="favorites__description-hover">
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
-                        <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет метала</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
-                        <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет дерева</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
-                        <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Профиль</p>
-                    </li>
-                  </ul>
-                </div>
-              </a>
-            </td>
-            <td class="favorites__cell favorites__cell--name">
-              <label for="favorites__value-8" class="favorites__table-label">NOSTRUD EXERCI TATION ULLAMCORPER
-                SUSCIPIT</label>
-            </td>
-            <td class="favorites__cell favorites__cell--quantity">
-              <p class="favorites__table-quantity quantity">
-                <input type="number" class="favorites__table-input quantity__item" id="favorites__value-8" value="1" name="favorites__value">
-              </p>
-            </td>
-            <td class="favorites__cell favorites__cell--height">
-              <p class="favorites__sizes favorites__sizes--height">130</p>
-            </td>
-            <td class="favorites__cell favorites__cell--width">
-              <p class="favorites__sizes favorites__sizes--width">130</p>
-            </td>
-            <td class="favorites__cell favorites__cell--depth">
-              <p class="favorites__sizes favorites__sizes--depth">50</p>
-            </td>
-          </tr>
-          <tr class="favorites__row">
-            <td class="favorites__cell favorites__cell--number">9</td>
-            <td class="favorites__cell favorites__cell--photo">
-              <a href="#" class="favorites__table-link">
-                <picture class="favorites__picture">
-                  <source type="image/webp" srcset="img/main/favorites/photo-7.webp">
-                  <img src="img/main/favorites/photo-7.png" alt="Photo 9" class="favorites__photo">
-                </picture>
 
-                <div class="favorites__hover-box">
-                  <picture class="favorites__picture-hover">
+                  <div class="favorites__hover-box">
+                    <picture class="favorites__picture-hover">
+                      <source type="image/webp" srcset="img/main/favorites/photo-8.webp">
+                      <img src="img/main/favorites/photo-8.png" alt="Photo 8" class="favorites__photo-hover">
+                    </picture>
+                    <ul class="favorites__description-hover">
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
+                          <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет метала</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
+                          <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет дерева</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
+                          <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Профиль</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </td>
+              <td class="favorites__cell favorites__cell--name">
+                <label for="favorites__value-8" class="favorites__table-label">NOSTRUD EXERCI TATION ULLAMCORPER
+                  SUSCIPIT</label>
+              </td>
+              <td class="favorites__cell favorites__cell--quantity">
+                <p class="favorites__table-quantity quantity">
+                  <input type="number" class="favorites__table-input quantity__item" id="favorites__value-8" value="1" name="favorites__value">
+                </p>
+              </td>
+              <td class="favorites__cell favorites__cell--height">
+                <p class="favorites__sizes favorites__sizes--height">130</p>
+              </td>
+              <td class="favorites__cell favorites__cell--width">
+                <p class="favorites__sizes favorites__sizes--width">130</p>
+              </td>
+              <td class="favorites__cell favorites__cell--depth">
+                <p class="favorites__sizes favorites__sizes--depth">50</p>
+              </td>
+            </tr>
+            <tr class="favorites__row">
+              <td class="favorites__cell favorites__cell--number">9</td>
+              <td class="favorites__cell favorites__cell--photo">
+                <a href="#" class="favorites__table-link">
+                  <picture class="favorites__picture">
                     <source type="image/webp" srcset="img/main/favorites/photo-7.webp">
-                    <img src="img/main/favorites/photo-7.png" alt="Photo 9" class="favorites__photo-hover">
+                    <img src="img/main/favorites/photo-7.png" alt="Photo 9" class="favorites__photo">
                   </picture>
-                  <ul class="favorites__description-hover">
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
-                        <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет метала</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
-                        <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет дерева</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
-                        <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Профиль</p>
-                    </li>
-                  </ul>
-                </div>
-              </a>
-            </td>
-            <td class="favorites__cell favorites__cell--name">
-              <label for="favorites__value-9" class="favorites__table-label">EUISMOD TINCIDUNT UT LAOREET</label>
-            </td>
-            <td class="favorites__cell favorites__cell--quantity">
-              <p class="favorites__table-quantity quantity">
-                <input type="number" class="favorites__table-input quantity__item" id="favorites__value-9" value="2" name="favorites__value">
-              </p>
-            </td>
-            <td class="favorites__cell favorites__cell--height">
-              <p class="favorites__sizes favorites__sizes--height">125</p>
-            </td>
-            <td class="favorites__cell favorites__cell--width">
-              <p class="favorites__sizes favorites__sizes--width">160</p>
-            </td>
-            <td class="favorites__cell favorites__cell--depth">
-              <p class="favorites__sizes favorites__sizes--depth">70</p>
-            </td>
-          </tr>
-          <tr class="favorites__row">
-            <td class="favorites__cell favorites__cell--number">10</td>
-            <td class="favorites__cell favorites__cell--photo">
-              <a href="#" class="favorites__table-link">
-                <picture class="favorites__picture">
-                  <source type="image/webp" srcset="img/main/favorites/photo-1.webp">
-                  <img src="img/main/favorites/photo-1.png" alt="Photo 4
-10" class="favorites__photo">
-                </picture>
 
-                <div class="favorites__hover-box">
-                  <picture class="favorites__picture-hover">
+                  <div class="favorites__hover-box">
+                    <picture class="favorites__picture-hover">
+                      <source type="image/webp" srcset="img/main/favorites/photo-7.webp">
+                      <img src="img/main/favorites/photo-7.png" alt="Photo 9" class="favorites__photo-hover">
+                    </picture>
+                    <ul class="favorites__description-hover">
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
+                          <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет метала</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
+                          <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет дерева</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
+                          <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Профиль</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </td>
+              <td class="favorites__cell favorites__cell--name">
+                <label for="favorites__value-9" class="favorites__table-label">EUISMOD TINCIDUNT UT LAOREET</label>
+              </td>
+              <td class="favorites__cell favorites__cell--quantity">
+                <p class="favorites__table-quantity quantity">
+                  <input type="number" class="favorites__table-input quantity__item" id="favorites__value-9" value="2" name="favorites__value">
+                </p>
+              </td>
+              <td class="favorites__cell favorites__cell--height">
+                <p class="favorites__sizes favorites__sizes--height">125</p>
+              </td>
+              <td class="favorites__cell favorites__cell--width">
+                <p class="favorites__sizes favorites__sizes--width">160</p>
+              </td>
+              <td class="favorites__cell favorites__cell--depth">
+                <p class="favorites__sizes favorites__sizes--depth">70</p>
+              </td>
+            </tr>
+            <tr class="favorites__row">
+              <td class="favorites__cell favorites__cell--number">10</td>
+              <td class="favorites__cell favorites__cell--photo">
+                <a href="#" class="favorites__table-link">
+                  <picture class="favorites__picture">
                     <source type="image/webp" srcset="img/main/favorites/photo-1.webp">
-                    <img src="img/main/favorites/photo-1.png" alt="Photo 10" class="favorites__photo-hover">
+                    <img src="img/main/favorites/photo-1.png" alt="Photo 4
+  10" class="favorites__photo">
                   </picture>
-                  <ul class="favorites__description-hover">
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
-                        <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет метала</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
-                        <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет дерева</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
-                        <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Профиль</p>
-                    </li>
-                  </ul>
-                </div>
-              </a>
-            </td>
-            <td class="favorites__cell favorites__cell--name">
-              <label for="favorites__value-10" class="favorites__table-label">EUISMOD TINCIDUNT UT LAOREET
-                DOLORE MAGNA</label>
-            </td>
-            <td class="favorites__cell favorites__cell--quantity">
-              <p class="favorites__table-quantity quantity">
-                <input type="number" class="favorites__table-input quantity__item" id="favorites__value-10" value="1" name="favorites__value">
-              </p>
-            </td>
-            <td class="favorites__cell favorites__cell--height">
-              <p class="favorites__sizes favorites__sizes--height">110</p>
-            </td>
-            <td class="favorites__cell favorites__cell--width">
-              <p class="favorites__sizes favorites__sizes--width">80</p>
-            </td>
-            <td class="favorites__cell favorites__cell--depth">
-              <p class="favorites__sizes favorites__sizes--depth">80</p>
-            </td>
-          </tr>
-          <tr class="favorites__row">
-            <td class="favorites__cell favorites__cell--number">11</td>
-            <td class="favorites__cell favorites__cell--photo">
-              <a href="#" class="favorites__table-link">
-                <picture class="favorites__picture">
-                  <source type="image/webp" srcset="img/main/favorites/photo-2.webp">
-                  <img src="img/main/favorites/photo-2.png" alt="Photo 11" class="favorites__photo">
-                </picture>
 
-                <div class="favorites__hover-box">
-                  <picture class="favorites__picture-hover">
+                  <div class="favorites__hover-box">
+                    <picture class="favorites__picture-hover">
+                      <source type="image/webp" srcset="img/main/favorites/photo-1.webp">
+                      <img src="img/main/favorites/photo-1.png" alt="Photo 10" class="favorites__photo-hover">
+                    </picture>
+                    <ul class="favorites__description-hover">
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
+                          <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет метала</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
+                          <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет дерева</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
+                          <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Профиль</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </td>
+              <td class="favorites__cell favorites__cell--name">
+                <label for="favorites__value-10" class="favorites__table-label">EUISMOD TINCIDUNT UT LAOREET
+                  DOLORE MAGNA</label>
+              </td>
+              <td class="favorites__cell favorites__cell--quantity">
+                <p class="favorites__table-quantity quantity">
+                  <input type="number" class="favorites__table-input quantity__item" id="favorites__value-10" value="1" name="favorites__value">
+                </p>
+              </td>
+              <td class="favorites__cell favorites__cell--height">
+                <p class="favorites__sizes favorites__sizes--height">110</p>
+              </td>
+              <td class="favorites__cell favorites__cell--width">
+                <p class="favorites__sizes favorites__sizes--width">80</p>
+              </td>
+              <td class="favorites__cell favorites__cell--depth">
+                <p class="favorites__sizes favorites__sizes--depth">80</p>
+              </td>
+            </tr>
+            <tr class="favorites__row">
+              <td class="favorites__cell favorites__cell--number">11</td>
+              <td class="favorites__cell favorites__cell--photo">
+                <a href="#" class="favorites__table-link">
+                  <picture class="favorites__picture">
                     <source type="image/webp" srcset="img/main/favorites/photo-2.webp">
-                    <img src="img/main/favorites/photo-2.png" alt="Photo 11" class="favorites__photo-hover">
+                    <img src="img/main/favorites/photo-2.png" alt="Photo 11" class="favorites__photo">
                   </picture>
-                  <ul class="favorites__description-hover">
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
-                        <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет метала</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
-                        <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет дерева</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
-                        <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Профиль</p>
-                    </li>
-                  </ul>
-                </div>
-              </a>
-            </td>
-            <td class="favorites__cell favorites__cell--name">
-              <label for="favorites__value-11" class="favorites__table-label">ENIM AD MINIM VENIAM, QUIS NOSTRUD</label>
-            </td>
-            <td class="favorites__cell favorites__cell--quantity">
-              <p class="favorites__table-quantity quantity">
-                <input type="number" class="favorites__table-input quantity__item" id="favorites__value-11" value="2" name="favorites__value">
-              </p>
-            </td>
-            <td class="favorites__cell favorites__cell--height">
-              <p class="favorites__sizes favorites__sizes--height">110</p>
-            </td>
-            <td class="favorites__cell favorites__cell--width">
-              <p class="favorites__sizes favorites__sizes--width">80</p>
-            </td>
-            <td class="favorites__cell favorites__cell--depth">
-              <p class="favorites__sizes favorites__sizes--depth">80</p>
-            </td>
-          </tr>
-          <tr class="favorites__row">
-            <td class="favorites__cell favorites__cell--number">12</td>
-            <td class="favorites__cell favorites__cell--photo">
-              <a href="#" class="favorites__table-link">
-                <picture class="favorites__picture">
-                  <source type="image/webp" srcset="img/main/favorites/photo-12.webp">
-                  <img src="img/main/favorites/photo-12.png" alt="Photo 12" class="favorites__photo">
-                </picture>
 
-                <div class="favorites__hover-box">
-                  <picture class="favorites__picture-hover">
+                  <div class="favorites__hover-box">
+                    <picture class="favorites__picture-hover">
+                      <source type="image/webp" srcset="img/main/favorites/photo-2.webp">
+                      <img src="img/main/favorites/photo-2.png" alt="Photo 11" class="favorites__photo-hover">
+                    </picture>
+                    <ul class="favorites__description-hover">
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
+                          <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет метала</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
+                          <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет дерева</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
+                          <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Профиль</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </td>
+              <td class="favorites__cell favorites__cell--name">
+                <label for="favorites__value-11" class="favorites__table-label">ENIM AD MINIM VENIAM, QUIS NOSTRUD</label>
+              </td>
+              <td class="favorites__cell favorites__cell--quantity">
+                <p class="favorites__table-quantity quantity">
+                  <input type="number" class="favorites__table-input quantity__item" id="favorites__value-11" value="2" name="favorites__value">
+                </p>
+              </td>
+              <td class="favorites__cell favorites__cell--height">
+                <p class="favorites__sizes favorites__sizes--height">110</p>
+              </td>
+              <td class="favorites__cell favorites__cell--width">
+                <p class="favorites__sizes favorites__sizes--width">80</p>
+              </td>
+              <td class="favorites__cell favorites__cell--depth">
+                <p class="favorites__sizes favorites__sizes--depth">80</p>
+              </td>
+            </tr>
+            <tr class="favorites__row">
+              <td class="favorites__cell favorites__cell--number">12</td>
+              <td class="favorites__cell favorites__cell--photo">
+                <a href="#" class="favorites__table-link">
+                  <picture class="favorites__picture">
                     <source type="image/webp" srcset="img/main/favorites/photo-12.webp">
-                    <img src="img/main/favorites/photo-12.png" alt="Photo 12" class="favorites__photo-hover">
+                    <img src="img/main/favorites/photo-12.png" alt="Photo 12" class="favorites__photo">
                   </picture>
-                  <ul class="favorites__description-hover">
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
-                        <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет метала</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
-                        <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Цвет дерева</p>
-                    </li>
-                    <li class="favorites__item-hover">
-                      <picture class="favorites__picture-color">
-                        <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
-                        <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
-                      </picture>
-                      <p class="favorites__description-color">Профиль</p>
-                    </li>
-                  </ul>
-                </div>
-              </a>
-            </td>
-            <td class="favorites__cell favorites__cell--name">
-              <label for="favorites__value-12" class="favorites__table-label">NOSTRUD EXERCI TATION ULLAMCORPER
-                SUSCIPIT </label>
-            </td>
-            <td class="favorites__cell favorites__cell--quantity">
-              <p class="favorites__table-quantity quantity">
-                <input type="number" class="favorites__table-input quantity__item" id="favorites__value-12" value="1" name="favorites__value">
-              </p>
-            </td>
-            <td class="favorites__cell favorites__cell--height">
-              <p class="favorites__sizes favorites__sizes--height">105</p>
-            </td>
-            <td class="favorites__cell favorites__cell--width">
-              <p class="favorites__sizes favorites__sizes--width">175</p>
-            </td>
-            <td class="favorites__cell favorites__cell--depth">
-              <p class="favorites__sizes favorites__sizes--depth">50</p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+
+                  <div class="favorites__hover-box">
+                    <picture class="favorites__picture-hover">
+                      <source type="image/webp" srcset="img/main/favorites/photo-12.webp">
+                      <img src="img/main/favorites/photo-12.png" alt="Photo 12" class="favorites__photo-hover">
+                    </picture>
+                    <ul class="favorites__description-hover">
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/brown.webp">
+                          <img src="img/main/favorites/colors/brown.jpg" alt="brown" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет метала</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/gray.webp">
+                          <img src="img/main/favorites/colors/gray.jpg" alt="gray" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Цвет дерева</p>
+                      </li>
+                      <li class="favorites__item-hover">
+                        <picture class="favorites__picture-color">
+                          <source type="image/webp" srcset="img/main/favorites/colors/white.webp">
+                          <img src="img/main/favorites/colors/white.jpg" alt="white" class="favorites__photo-color">
+                        </picture>
+                        <p class="favorites__description-color">Профиль</p>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </td>
+              <td class="favorites__cell favorites__cell--name">
+                <label for="favorites__value-12" class="favorites__table-label">NOSTRUD EXERCI TATION ULLAMCORPER
+                  SUSCIPIT </label>
+              </td>
+              <td class="favorites__cell favorites__cell--quantity">
+                <p class="favorites__table-quantity quantity">
+                  <input type="number" class="favorites__table-input quantity__item" id="favorites__value-12" value="1" name="favorites__value">
+                </p>
+              </td>
+              <td class="favorites__cell favorites__cell--height">
+                <p class="favorites__sizes favorites__sizes--height">105</p>
+              </td>
+              <td class="favorites__cell favorites__cell--width">
+                <p class="favorites__sizes favorites__sizes--width">175</p>
+              </td>
+              <td class="favorites__cell favorites__cell--depth">
+                <p class="favorites__sizes favorites__sizes--depth">50</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <include src="src/posthtml/blocks/_pagination.html"></include>
 

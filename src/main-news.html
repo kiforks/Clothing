@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="UTF-8">
-  <title>Project</title>
+  <title>Блог</title>
   <link rel="stylesheet" href="css/style.min.css">
   <!--  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/*.png">-->
   <include src="src/posthtml/templates/fonts.html"></include>
@@ -38,13 +38,12 @@
 
           <p class="main-news__label main-news__label--sort">Порядок сортировки:</p>
 
-
-          <select class="main-news__select select" name="main-news__price">
-            <option class="select__option" disabled>По возрастанию цены</option>
-            <option class="select__option" value="По возрастанию цены">По возрастанию цены</option>
-            <option class="select__option" value="По дате">По дате</option>
-            <option class="select__option" value="По материалам">По материалам</option>
-          </select>
+          <div class="main-news__select select">
+            <div class="select__option select__option--disabled">По возрастанию цены</div>
+            <div class="select__option">По возрастанию цены</div>
+            <div class="select__option">По дате</div>
+            <div class="select__option">По материалам</div>
+          </div>
 
           <p class="main-news__count quantity">
             <label for="main-news__number" class="main-news__label main-news__label--number">Показать товаров:</label>

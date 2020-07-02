@@ -5,6 +5,7 @@
   line-height: 20px;
   font-weight: normal;
   text-align: right;
+  text-transform: none;
 }
 
 .subtitle__pseudo {
@@ -26,6 +27,13 @@
   &--favorites {
     @include before-clean {
       left: -10px;
+    }
+  }
+
+  &--contacts {
+    @include before-clean {
+      left: -12px;
+      bottom: -8px;
     }
   }
 }

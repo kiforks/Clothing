@@ -90,3 +90,4 @@ gallery.forEach(sliderDom => {
     count.textContent = '/' + pagesAmount;
   });
 });
+
