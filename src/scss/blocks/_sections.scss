@@ -1,7 +1,16 @@
 .sections-body {
   position: relative;
+
   .header {
     padding-bottom: 115px;
+  }
+}
+
+.sections {
+  .new-select {
+    @include before-after-clean {
+      display: none;
+    }
   }
 }
 
@@ -78,20 +87,13 @@
 }
 
 .sections__item {
+  //position: relative;
   width: 385px;
   padding-bottom: 15px;
   background-image: url('../img/main/background/gray.png ');
   background-position: bottom right;
   background-size: 301px 405px;
   background-repeat: no-repeat;
-  //@include before {
-  //  z-index: -1;
-  //  bottom: 0;
-  //  right: 0;
-  //  width: 301px;
-  //  height: 405px;
-  //  background-color: #f1f2f5;
-  //}
 
   &:nth-child(3n+1) {
     padding-left: 35px;
@@ -103,6 +105,7 @@
 }
 
 .sections__picture {
+  position: relative;
   display: block;
   width: 334px;
   height: 389px;
@@ -111,6 +114,25 @@
   text-align: center;
   background-color: white;
   cursor: pointer;
+  @include before {
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    height: 389px;
+    background-color: transparent;
+    border: 5px solid $light-red;
+    visibility: visible;
+    opacity: 1;
+    @include transition-fade;
+  }
+
+  &--closed {
+    @include before-clean {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
 }
 
 .sections__image {
@@ -341,17 +363,152 @@
 
 .sections__specifications-item {
   max-width: 30%;
+
+  .new-select__list {
+    @include flex;
+    justify-content: space-between;
+    padding: 16px 39px;
+    padding-right: 29px;
+    width: 495px;
+    left: auto;
+    top: 65px;
+    right: -31px;
+    border: 0;
+    cursor: default;
+  }
+
+  .new-select__item {
+    max-height: 100%;
+    border: 0;
+
+    span {
+      padding: 0;
+      height: 100%;
+    }
+  }
+
+  &--dsp,
+  &--metal {
+    .new-select__item {
+      &:first-child {
+        margin-right: 0;
+      }
+
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &--dsp {
+    .new-select__list {
+      top: 77px;
+      right: auto;
+      left: -20px;
+    }
+  }
+
+  &--metal {
+    .new-select__list {
+      top: 77px;
+      right: -196px;
+    }
+  }
+
+  .sections__char-picture {
+    height: auto;
+    width: auto;
+  }
+
+  .sections__char-image {
+    width: 40px;
+    margin-bottom: 20px;
+  }
 }
 
-.sections__specifications-picture {
+.new-select__list {
+  .sections__char-picture {
+    &--dsp,
+    &--metal {
+      position: relative;
+      @include before {
+        top: -5px;
+        left: -5px;
+        width: 50px;
+        height: 46px;
+        background-color: transparent;
+        border: 2px solid $light-red;
+        opacity: 0;
+        visibility: hidden;
+        @include transition-fade;
+      }
+      @include hover {
+        @include before-clean {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+.new-select__item {
+  .sections__char-picture {
+    height: 100%;
+    margin-right: 0;
+  }
+
+  &:first-child {
+    margin-right: 32px;
+  }
+
+  &:nth-child(2) {
+    margin-right: 14px;
+  }
+}
+
+.new-select {
+  .sections__char-picture {
+    font-size: 0;
+    @include hover {
+      .sections__char-icon {
+        fill: black;
+      }
+    }
+  }
+}
+
+.sections__char {
+  @include flex;
+  justify-content: center;
+  @include reset-list;
+}
+
+.sections__char-picture {
+  @include flex-column;
+  justify-content: space-between;
+  align-items: center;
+  @include reset-margin-text;
   width: 40px;
   height: 36px;
   @include center-margin;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: bold;
+  @include hover {
+    color: $black;
+
+    .sections__char-icon {
+      fill: $light-red;
+    }
+  }
 
   &--circuit {
-    width: 48px;
-    height: 45px;
-    margin-left: 5px;
+    width: auto;
+    height: 100%;
+    max-height: 100%;
+    margin-right: 15px;
   }
 }
 
@@ -360,4 +517,22 @@
   height: 100%;
   @include object-fit(cover);
   cursor: pointer;
+}
+
+.sections__char-image {
+  max-height: 100%;
+  height: 36px;
+}
+
+.sections__char-item {
+  @include flex;
+}
+
+.sections__char-icon {
+  margin-bottom: 7px;
+  @include transition;
+
+  &--rectangle {
+    margin-top: 8px;
+  }
 }

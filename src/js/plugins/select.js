@@ -1,16 +1,16 @@
-function selectInit(selector) {
+function selectInit(selector, selectOptionItem) {
   $('.' + selector).each(function() {
     const _this = $(this),
-      selectOption = _this.find('.select__option'),
+      selectOption = _this.find('.' + selectOptionItem),
       selectOptionLength = selectOption.length,
       selectedOption = selectOption.filter(':selected'),
-      duration = 750; // длительность анимации
+      duration = 300; // длительность анимации
 
     _this.hide();
     _this.wrap('<div class="select"></div>');
     $('<div>', {
       class: 'new-select',
-      html: _this.children('.select__option--disabled').html()
+      html: _this.children('.' + selectOptionItem + '--disabled').html()
     }).insertAfter(_this);
 
     const selectHead = _this.next('.new-select');
@@ -55,4 +55,7 @@ function selectInit(selector) {
   });
 }
 
-selectInit('select');
+selectInit('select', 'select__option');
+selectInit('sections__char--circuit', 'sections__char-item--circuit');
+selectInit('sections__char--dsp', 'sections__char-item--dsp');
+selectInit('sections__char--metal', 'sections__char-item--metal');
