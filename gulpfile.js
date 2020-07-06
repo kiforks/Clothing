@@ -209,13 +209,13 @@ function sprite() {
     .pipe(dest(path.build.img))
 }
 
-function webpBuild() {
-  return src(path.build.webp)
-    .pipe(webp({
-      quality: 70
-    }))
-    .pipe(dest(path.build.img))
-}
+// function webpBuild() {
+//   return src(path.build.webp)
+//     .pipe(webp({
+//       quality: 70
+//     }))
+//     .pipe(dest(path.build.img))
+// }
 
 
 // Fonts
@@ -279,7 +279,7 @@ function libs() {
 
 // Build
 const fonts = gulp.series(ttfConversion, woffConversion);
-const imageBuild = gulp.series(ignoreImagesBuild, sprite, imageSorting, webpBuild, images); // if you don't need retina images just delete task 'retinaImages' from here
+const imageBuild = gulp.series(ignoreImagesBuild, sprite, imageSorting, images); // if you don't need retina images just delete task 'retinaImages' from here
 const build = gulp.series(clean, gulp.series(imageBuild, videoBuild, css, html, js, jsIgnoreBuild, libs, fonts));
 const watch = gulp.parallel(watchFiles, serve);
 
@@ -287,7 +287,7 @@ const watch = gulp.parallel(watchFiles, serve);
 
 //Exports
 exports.videoBuild = videoBuild;
-exports.webpBuild = webpBuild;
+// exports.webpBuild = webpBuild;
 exports.sprite = sprite;
 exports.libs = libs;
 exports.jsIgnoreBuild = jsIgnoreBuild;

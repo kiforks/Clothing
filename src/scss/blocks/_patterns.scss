@@ -1,0 +1,130 @@
+.patterns {
+  @include flex;
+  justify-content: space-between;
+  @include reset-list;
+
+  .new-select__list {
+    @include flex;
+    justify-content: space-between;
+    left: -60px;
+    top: 65px;
+    width: 505px;
+    height: auto;
+    padding: 25px 48px 15px 59px;
+    background-color: white;
+    border: 0;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .new-select__item {
+    border: 0;
+
+    span {
+      @include flex-column;
+      justify-content: space-between;
+      padding: 0;
+      @include hover {
+        color: $black;
+      }
+    }
+  }
+
+  .new-select {
+    font-size: 0;
+  }
+}
+
+.new-select {
+  .patterns__feature-description {
+    display: none;
+  }
+}
+
+.new-select__list {
+  .patterns__image {
+    position: relative;
+    @include before {
+      z-index: -1;
+      top: -6px;
+      right: -6px;
+      width: 52px;
+      height: 48px;
+      background-color: transparent;
+      border: 2px solid $light-red;
+      @include transition;
+      visibility: hidden;
+      opacity: 0;
+    }
+    @include hover {
+      @include before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.patterns__features {
+  @include reset-list;
+
+  &--figure {
+    & ~ .new-select__list {
+      left: auto;
+      right: -35px;
+      top: 60px;
+      width: 493px;
+      padding: 18px 27px 12px 39px;
+
+      .patterns__feature-description {
+        margin-top: 0;
+      }
+
+      .new-select__item {
+        @include flex;
+      }
+    }
+  }
+
+  &--metal {
+    & ~ .new-select__list {
+      left: -240px;
+    }
+  }
+}
+
+.patterns__description {
+  @include reset-margin-text;
+  margin-bottom: 23px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+}
+
+.patterns__item {
+  @include flex-column;
+  align-items: center;
+}
+
+.patterns__feature-description {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.patterns__picture {
+  @include reset-margin-text;
+  @include center-margin;
+  margin-bottom: auto;
+
+  &--rectangle {
+    padding-top: 8px;
+  }
+}
+
+.patterns__icon {
+  @include transition;
+  @include hover {
+    fill: $light-red;
+  }
+  @include active-opacity;
+  cursor: pointer;
+}

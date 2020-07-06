@@ -26,11 +26,20 @@ sectionsButton.forEach(button => {
   })
 });
 
-childToggleSelector('sections__modal','sections__picture',
-  'sections__item');
-childToggleSelector('sections__modal','sections__modal-button',
-  'sections__item');
-childToggleSelector('sections__picture', 'sections__image',
-  'sections__item');
+childToggleSelector('sections__image', 'sections__picture', 'results__item');
+childToggleSelector('sections__star-box', 'sections__star-box', 'results__item');
 
 
+
+const specificationButton = document.querySelectorAll('.specification__button');
+const sectionsImage =  document.querySelectorAll('.sections__image');
+
+specificationButton.forEach(button => {
+  button.addEventListener('click', event => {
+    event.preventDefault();
+
+    sectionsImage.forEach(image => {
+      image.classList.add('sections__image--closed')
+    });
+  })
+});

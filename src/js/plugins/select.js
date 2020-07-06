@@ -56,6 +56,7 @@ function selectInit(selector, selectOptionItem) {
 }
 
 selectInit('select', 'select__option');
-selectInit('sections__char--circuit', 'sections__char-item--circuit');
-selectInit('sections__char--dsp', 'sections__char-item--dsp');
-selectInit('sections__char--metal', 'sections__char-item--metal');
+selectInit('patterns__features--dsp', 'patterns__feature--dsp');
+selectInit('patterns__features--metal', 'patterns__feature--metal');
+selectInit('patterns__features--figure', 'patterns__feature--figure');
+
