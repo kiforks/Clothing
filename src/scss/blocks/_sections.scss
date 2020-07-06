@@ -84,7 +84,7 @@
 .sections__image {
   position: relative;
   @include before {
-    z-index: 0;
+    z-index: -100;
     top: 0;
     left: 0;
     right: 0;
@@ -93,14 +93,9 @@
     height: 100%;
     background-color: transparent;
     border: 5px solid $light-red;
-    @include transition;
-  }
-
-  &--closed {
-    @include before-clean {
-      z-index: -1;
-      border: 0;
-    }
+    @include transition-fade;
+    visibility: hidden;
+    opacity: 0;
   }
 }
 
@@ -113,11 +108,12 @@
   opacity: 0;
   @include transition-fade;
 
-  &--closed {
+  &--active {
     visibility: visible;
     opacity: 1;
   }
 }
+
 
 .sections__fill-star {
   fill: $light-red;
@@ -146,6 +142,14 @@
     .sections__modal {
       visibility: visible;
       opacity: 1;
+    }
+
+    .sections__image {
+      @include before-clean {
+        z-index: 100;
+        visibility: visible;
+        opacity: 1;
+      }
     }
   }
 }

@@ -5,10 +5,21 @@ function sectionsToggle(selector, button, parent) {
     button.onclick = function(event) {
       let parentSelector = event.target.closest('.' + parent);
 
+      console.log(parentSelector)
+
       let classList = parentSelector.classList;
       let activeSelector = selector + '--active';
 
-      classList.contains(activeSelector) ? classList.remove(activeSelector) : classList.add(activeSelector);
+      if(classList.contains(activeSelector)) {
+        classList.remove(activeSelector);
+        parentSelector.querySelector('.sections__star-box').classList.remove('sections__star-box--active')
+      } else {
+        classList.add(activeSelector);
+        parentSelector.querySelector('.sections__star-box').classList.add('sections__star-box--active')
+      }
+
+      // classList.contains(activeSelector) ? classList.remove(activeSelector) : classList.add(activeSelector);
+
     };
   });
 }

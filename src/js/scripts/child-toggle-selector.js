@@ -26,7 +26,6 @@ sectionsButton.forEach(button => {
   })
 });
 
-childToggleSelector('sections__image', 'sections__picture', 'results__item');
 childToggleSelector('sections__star-box', 'sections__star-box', 'results__item');
 
 
