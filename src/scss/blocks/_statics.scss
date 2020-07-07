@@ -19,6 +19,7 @@
 
 .statics-container {
   margin-bottom: 102px;
+  overflow: hidden;
 }
 
 .statics__quote {
@@ -310,10 +311,6 @@
         padding-left: 10px;
       }
     }
-  }
-
-  .statics-container {
-    overflow: visible;
   }
 
   .statics__head {

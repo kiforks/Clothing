@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <title>Контакты</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <!--  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/*.png">-->
+  <include src="src/posthtml/templates/favicon.html"></include>
   <include src="src/posthtml/templates/fonts.html"></include>
 </head>
 <body class="contacts-body">
@@ -55,18 +55,18 @@
             </li>
           </ul>
 
-          <form action="post" class="contacts__feedback">
+          <form action="post" class="contacts__feedback" data-aos="fade-down">
             <h2 class="contacts__feedback-title">Обратная связь</h2>
-            <input type="text" class="contacts__input contacts__input--name" name="contacts__name" placeholder="Ваше имя*" required>
-            <input type="tel" class="contacts__input contacts__input--phone" name="contacts__phone" placeholder="Телефон*" required>
-            <input type="email" class="contacts__input contacts__input--email" name="contacts__email" placeholder="E-mail*" required>
-            <textarea class="contacts__input contacts__input--message" name="contacts__message" placeholder="Сообщение*" required></textarea>
-            <button type="submit" class="contacts__button button">Отправить</button>
+            <input type="text" class="contacts__input contacts__input--name" name="contacts__name" placeholder="Ваше имя*" required data-aos="fade-down">
+            <input type="tel" class="contacts__input contacts__input--phone" name="contacts__phone" placeholder="Телефон*" required data-aos="fade-down">
+            <input type="email" class="contacts__input contacts__input--email" name="contacts__email" placeholder="E-mail*" required data-aos="fade-down">
+            <textarea class="contacts__input contacts__input--message" name="contacts__message" placeholder="Сообщение*" required data-aos="fade-down"></textarea>
+            <button type="submit" class="contacts__button button" data-aos="fade-down">Отправить</button>
           </form>
         </div>
       </section>
 
-      <div class="contacts__map"></div>
+      <div class="contacts__map" data-aos="fade-down"></div>
     </main>
   </div>
 
@@ -76,11 +76,8 @@
   <script src="js/plugins/aos.js"></script>
   <script src="js/plugins/tiny-slider.js"></script>
   <script src="js/script.js"></script>
+  <include src="src/posthtml/templates/_aos-init.html"></include>
   <script>
-    AOS.init({
-      duration: 1500
-    });
-
     objectFitImages();
   </script>
 

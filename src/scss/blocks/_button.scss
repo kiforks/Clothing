@@ -20,7 +20,7 @@
   @include hover {
     color: white;
     background-color: #222222;
-    @include transition;
+    transition: all $transition-delay !important;
   }
   @include active-opacity;
 }

@@ -34,7 +34,7 @@
       </p>
 
       <div class="favorites__inner">
-        <table class="favorites__table">
+        <table class="favorites__table" data-aos="fade-down">
           <caption class="visually-hidden">Характеристики товара</caption>
           <thead class="favorites__header">
             <tr class="favorites__row favorites__row--header">
@@ -720,12 +720,8 @@
 <script src="js/plugins/tiny-slider.js"></script>
 <script src="js/plugins/number.js"></script>
 <script src="js/script.js"></script>
-
+<include src="src/posthtml/templates/_aos-init.html"></include>
 <script>
-  AOS.init({
-    duration: 1500
-  });
-
   objectFitImages();
 </script>
 

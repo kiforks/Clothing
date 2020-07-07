@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <title>Главная</title>
   <link rel="stylesheet" href="css/style.min.css">
-<!--  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/*.png">-->
+  <include src="src/posthtml/templates/favicon.html"></include>
   <include src="src/posthtml/templates/fonts.html"></include>
 </head>
 <body class="body">
@@ -43,12 +43,6 @@
 
   <script src="js/script.js"></script>
 
-  <script>
-    AOS.init({
-      duration: 1500
-    });
-
-    objectFitImages();
-  </script>
+  <include src="src/posthtml/templates/_aos-init.html"></include>
 </body>
 </html>
