@@ -177,15 +177,35 @@
   text-align: right;
 }
 
-.patterns__image {
-  @include reset-margin-text;
-  width: 40px;
-  height: 36px;
-}
 
-.patterns__feature-description {
-  @include reset-margin-text;
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: bold;
+//Tablet
+@include tablet {
+  .specification__star {
+    right: auto;
+    left: 25px;
+    top: 25px;
+  }
+
+  .specification__image {
+    width: 485px;
+    @include center-margin;
+    margin-bottom: 45px;
+  }
+
+  .specification__wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .specification__inner {
+    margin-bottom: 25px;
+  }
+
+  .specification__list {
+    margin-bottom: 45px;
+  }
+
+  .specification__button {
+    right: 30px;
+  }
 }

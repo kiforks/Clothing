@@ -11,6 +11,7 @@ function sectionsToggle(button, selector, parent) {
       let star = parentSelector.querySelector('.specification__star');
       let cloneStar = parentSelector.querySelector('.sections__star-box');
 
+
       if(button.classList.contains('sections__picture')) {
         toggleSelector.appendChild(modalWindow);
       } else if (button.classList.contains('specification__button')) {
@@ -30,7 +31,7 @@ function sectionsToggle(button, selector, parent) {
 
 sectionsToggle('sections__picture', 'sections__wrapper',
   'sections__item');
-sectionsToggle('specification__button', 'sections__item',
-  'sections__list');
+sectionsToggle('specification__button', 'sections__wrapper',
+  'sections__item');
 sectionsToggle('specification__star', 'specification__star',
   'sections__item');
