@@ -6,10 +6,11 @@
   <meta charset="UTF-8">
   <title>Контакты</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <include src="src/posthtml/templates/favicon.html"></include>
+<!--  <include src="src/posthtml/templates/favicon.html"></include>-->
   <include src="src/posthtml/templates/fonts.html"></include>
 </head>
-<body class="contacts-body">
+<body class="contacts-body site-wrapper">
+  <include src="src/posthtml/templates/_preloader.html"></include>
   <include src="src/posthtml/templates/sprite.html"></include>
   <include src="src/posthtml/blocks/_header.html"></include>
 
@@ -73,6 +74,7 @@
   <include src="src/posthtml/blocks/_footer.html"></include>
 
   <!--JS-->
+  <script src="js/plugins/preloader.js"></script>
   <script src="js/plugins/aos.js"></script>
   <script src="js/plugins/tiny-slider.js"></script>
   <script src="js/script.js"></script>

@@ -6,12 +6,13 @@
   <meta charset="UTF-8">
   <title>Избранное</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <!--  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/*.png">-->
+  <!--  <include src="src/posthtml/templates/favicon.html"></include>-->
   <include src="src/posthtml/templates/fonts.html"></include>
 </head>
-<body class="news-body">
-<include src="src/posthtml/templates/sprite.html"></include>
-<include src="src/posthtml/blocks/_header.html"></include>
+<body class="news-body site-wrapper">
+  <include src="src/posthtml/templates/_preloader.html"></include>
+  <include src="src/posthtml/templates/sprite.html"></include>
+  <include src="src/posthtml/blocks/_header.html"></include>
 
 <div class="favorites-container">
   <main class="favorites wrapper">
@@ -715,6 +716,7 @@
 <include src="src/posthtml/blocks/_footer.html"></include>
 
 <!--JS-->
+<script src="js/plugins/preloader.js"></script>
 <script src="libs/jquery-3.5.1.min.js"></script>
 <script src="js/plugins/aos.js"></script>
 <script src="js/plugins/tiny-slider.js"></script>
