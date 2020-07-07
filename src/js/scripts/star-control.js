@@ -1,34 +1,36 @@
-function sectionsToggle(selector, button, parent) {
+function sectionsToggle(button, selector, parent) {
   let toggleButton = document.querySelectorAll('.' + button);
-  // let star = document.querySelectorAll('.specification__star');
+  let modalWindow = document.querySelector('.specification');
 
   toggleButton.forEach(button => {
-    button.onclick = function(event) {
+    button.onclick = event => {
       let parentSelector = event.target.closest('.' + parent);
-      let classList = parentSelector.classList;
+      let toggleSelector = parentSelector.querySelector('.' + selector);
+      let toggleClass = toggleSelector.classList;
       let activeSelector = selector + '--active';
-      // let star = parentSelector.querySelector('.specification__star');
-      // let starClone = parentSelector.querySelector('.sections__star-box');
+      let star = parentSelector.querySelector('.specification__star');
+      let cloneStar = parentSelector.querySelector('.sections__star-box');
 
-      classList.contains(activeSelector) ? classList.remove(activeSelector) : classList.add(activeSelector);
+      if(button.classList.contains('sections__picture')) {
+        toggleSelector.appendChild(modalWindow);
+      } else if (button.classList.contains('specification__button')) {
+        toggleSelector.removeChild(modalWindow);
+      }
 
-      // star.onclick = function (event) {
-      //   if(star.classList.contains('specification__star--active')) {
-      //     starClone.classList.add('sections__star-box--active');
-      //   } else {
-      //     starClone.classList.remove('sections__star-box--active');
-      //   }
-      // }
-    };
-  });
+      toggleClass.contains(activeSelector) ? toggleClass.remove(activeSelector) : toggleClass.add(activeSelector);
 
-  // star.forEach(star => {
-  //   star.onclick = function (event) {
-  //
-  //   }
-  // })
+      if(star.classList.contains('specification__star--active')) {
+        cloneStar.classList.add('sections__star-box--active')
+      } else {
+        cloneStar.classList.remove('sections__star-box--active')
+      }
+    }
+  })
 }
 
-sectionsToggle('sections__item', 'sections__picture', 'sections__item');
-sectionsToggle('sections__item', 'specification__button', 'sections__item');
-sectionsToggle('specification__star', 'specification__star', 'specification__star');
+sectionsToggle('sections__picture', 'sections__wrapper',
+  'sections__item');
+sectionsToggle('specification__button', 'sections__item',
+  'sections__list');
+sectionsToggle('specification__star', 'specification__star',
+  'sections__item');

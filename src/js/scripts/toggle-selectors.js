@@ -69,10 +69,6 @@ selectorToggle('video__button', 'video__button');
 selectorToggle('video-overlay', 'video__button');
 selectorToggle('video__box', 'video__button');
 selectorToggle('body', 'video__button');
-selectorToggle('specification', 'specification__button');
-selectorToggle('specification', 'sections__picture');
-selectorToggle('sections__list', 'specification__button');
-selectorToggle('sections__list', 'sections__picture');
 
 
 

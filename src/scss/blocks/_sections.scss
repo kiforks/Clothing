@@ -126,28 +126,35 @@
 
 .sections__fill-star {
   fill: $light-red;
-  @include hover-opacity;
-  @include active-opacity;
-  @include transition;
-  cursor: pointer;
 }
 
 .sections__modal {
   position: absolute;
   z-index: 1000;
-  top: 431px;
+  top: 50%;
   left: 0;
   right: 0;
   visibility: hidden;
   opacity: 0;
-}
-
-.sections__item {
-  z-index: 10;
 
   &--active {
-    z-index: 100;
+    .sections__modal {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
 
+//.sections__item {
+//  z-index: 10;
+//
+//  &--active {
+//    z-index: 100;
+//  }
+//}
+
+.sections__wrapper {
+  &--active {
     .sections__modal {
       visibility: visible;
       opacity: 1;

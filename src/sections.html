@@ -39,35 +39,38 @@
         </div>
 
         <div class="results sections__container">
-          <ul class="results__list sections__list sections__list--closed">
+          <ul class="results__list sections__list">
             <li class="results__item sections__item" data-aos="fade-down">
-              <p class="results__image sections__image">
-                <span class="sections__star-box">
-                  <svg class="sections__fill-star" width="36" height="34">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                </span>
-                <picture class="results__picture sections__picture">
-                  <img src="img/main/results/photo-1.jpg" alt="Photo 1" class="results__photo">
-                </picture>
-              </p>
-              <p class="results__description">AD MINIM VENIAM, QUIS NOSTRUD</p>
-              <p class="results__model">S-039025</p>
-              <include src="src/posthtml/blocks/_specification.html"></include>
+              <div class="sections__wrapper">
+                <p class="results__image sections__image">
+                  <span class="sections__star-box">
+                    <svg class="sections__fill-star" width="36" height="34">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                  </span>
+                  <picture class="results__picture sections__picture">
+                    <img src="img/main/results/photo-1.jpg" alt="Photo 1" class="results__photo">
+                  </picture>
+                </p>
+                <p class="results__description">AD MINIM VENIAM, QUIS NOSTRUD</p>
+                <p class="results__model">S-039025</p>
+              </div>
             </li>
             <li class="results__item sections__item" data-aos="fade-down">
-              <p class="results__image sections__image">
-                <span class="sections__star-box">
-                  <svg class="sections__fill-star" width="36" height="34">
-                    <use xlink:href="#icon-star"></use>
-                  </svg>
-                </span>
-                <picture class="results__picture sections__picture">
-                  <img src="img/main/results/photo-2.jpg" alt="Photo 2" class="results__photo">
-                </picture>
-              </p>
-              <p class="results__description">CONSECTETUER ADIPISCING ELIT</p>
-              <p class="results__model">S-159025</p>
+              <div class="sections__wrapper">
+                <p class="results__image sections__image">
+                  <span class="sections__star-box">
+                    <svg class="sections__fill-star" width="36" height="34">
+                      <use xlink:href="#icon-star"></use>
+                    </svg>
+                  </span>
+                  <picture class="results__picture sections__picture">
+                    <img src="img/main/results/photo-2.jpg" alt="Photo 2" class="results__photo">
+                  </picture>
+                </p>
+                <p class="results__description">CONSECTETUER ADIPISCING ELIT</p>
+                <p class="results__model">S-159025</p>
+              </div>
             </li>
             <li class="results__item sections__item" data-aos="fade-down">
               <p class="results__image sections__image">
@@ -212,7 +215,7 @@
           </ul>
         </div>
 
-
+        <include src="src/posthtml/blocks/_specification.html"></include>
         <include src="src/posthtml/blocks/_pagination.html"></include>
 
         <a href="#" class="sections__link button" data-aos="fade-down">Показать еще</a>

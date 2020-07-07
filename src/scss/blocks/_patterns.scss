@@ -81,6 +81,10 @@
 
       .new-select__item {
         @include flex;
+
+        &:first-child {
+          margin-right: 27px;
+        }
       }
     }
   }
