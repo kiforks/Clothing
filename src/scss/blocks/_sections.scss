@@ -4,6 +4,10 @@
   .header {
     padding-bottom: 115px;
   }
+
+  .pagination {
+    margin-bottom: 85px;
+  }
 }
 
 .sections {
@@ -12,6 +16,11 @@
       display: none;
     }
   }
+}
+
+.sections-container {
+  margin-bottom: 85px;
+  overflow: hidden;
 }
 
 .sections__inner {
@@ -151,5 +160,78 @@
         opacity: 1;
       }
     }
+  }
+}
+
+.sections__container {
+  margin-bottom: 45px;
+}
+
+.sections__link {
+  display: block;
+  @include center-margin;
+}
+
+//Tablet
+@include tablet {
+  .sections-body {
+    .header {
+      padding-bottom: 0;
+      margin-bottom: 35px;
+    }
+
+    .pagination {
+      margin-bottom: 35px;
+    }
+  }
+
+  .sections-container {
+    margin-bottom: 45px;
+  }
+
+  .sections__title {
+    margin-bottom: 25px;
+  }
+
+  .sections__inner {
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  .sections__sort-title {
+    margin-right: 0;
+  }
+
+  .sections__container {
+    margin-bottom: 0;
+  }
+}
+
+//Mobile
+@include mobile {
+  .sections-body {
+    .header {
+      margin-bottom: 15px;
+    }
+  }
+
+  .sections__title {
+    margin-bottom: 25px;
+  }
+
+  .sections__sort-title {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .sections__sort-list {
+    flex-direction: column;
+    width: 100%;
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  .sections__container {
+    margin-bottom: 5px;
   }
 }
