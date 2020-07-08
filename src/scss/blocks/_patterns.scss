@@ -156,9 +156,12 @@
 //Mobile
 @include mobile {
   .patterns {
+    justify-content: center;
+
     .new-select__list {
       width: 280px;
-      left: -40px;
+      top: 40px;
+      left: -60px;
       padding: 15px;
     }
   }
@@ -166,7 +169,7 @@
   .patterns__features {
     &--metal {
       & ~ .new-select__list {
-        left: -120px;
+        left: -180px;
       }
     }
 
@@ -174,7 +177,8 @@
       & ~ .new-select__list {
         width: 280px;
         left: auto;
-        right: -34px;
+        top: 46px;
+        right: -116px;
 
         .new-select__item {
           width: 50%;
@@ -191,5 +195,14 @@
         }
       }
     }
+  }
+
+  .patterns__item {
+    width: 50%;
+    margin-bottom: 25px;
+  }
+
+  .patterns__description {
+    margin-bottom: 10px;
   }
 }
