@@ -281,4 +281,28 @@
   .sections__container {
     margin-bottom: 5px;
   }
+
+  .sections__modal {
+    width: 100%;
+    @include padding-mobile;
+    padding-top: 80px;
+  }
+
+  .sections__item {
+    &:nth-child(2n+2) {
+      .sections__modal {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    &:nth-child(2n+1) {
+      .sections__modal {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
 }
+
+

@@ -152,3 +152,44 @@
 //    }
 //  }
 //}
+
+//Mobile
+@include mobile {
+  .patterns {
+    .new-select__list {
+      width: 280px;
+      left: -40px;
+      padding: 15px;
+    }
+  }
+
+  .patterns__features {
+    &--metal {
+      & ~ .new-select__list {
+        left: -120px;
+      }
+    }
+
+    &--figure {
+      & ~ .new-select__list {
+        width: 280px;
+        left: auto;
+        right: -34px;
+
+        .new-select__item {
+          width: 50%;
+          justify-content: center;
+          margin-bottom: 10px;
+
+          &:first-child {
+            margin-right: 0;
+          }
+
+          span {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}

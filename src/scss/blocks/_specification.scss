@@ -188,6 +188,7 @@
 
   .specification__image {
     width: 485px;
+    height: 550px;
     @include center-margin;
     margin-bottom: 45px;
   }
@@ -207,5 +208,41 @@
 
   .specification__button {
     right: 30px;
+  }
+}
+
+//Mobile
+@include mobile {
+  .specification__star {
+    left: 10px;
+    top: 10px;
+  }
+
+  .specification__image {
+    width: 100%;
+    height: 340px;
+    margin-bottom: 25px;
+  }
+
+  .specification__inner {
+    margin-bottom: 15px;
+  }
+
+  .specification__list {
+    margin-bottom: 25px;
+  }
+
+  .specification__button {
+    right: 15px;
+    top: 15px;
+  }
+
+  .specification__price-value {
+    font-size: 28px;
+    line-height: 120%;
+  }
+
+  .specification__model-box {
+    padding-top: 0;
   }
 }
