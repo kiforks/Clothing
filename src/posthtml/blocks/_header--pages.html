@@ -1,0 +1,71 @@
+<header class="header header--pages" data-aos="fade-down">
+  <div class="header__wrapper wrapper">
+    <div class="header__mobile-box">
+      <a href="sitemap.html" class="header__logo-link">
+        <picture>
+          <img src="img/main/logo.png" alt="Lorem" class="header__logo" width="139">
+        </picture>
+      </a>
+      <button class="header__button header__button--closed">
+        <span class="visually-hidden">Мобильное меню</span>
+      </button>
+    </div>
+
+    <div class="header__nav-box header__nav-box--closed">
+      <nav class="header__nav">
+        <span class="header__nav-animate" data-aos="fade-down-right"></span>
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="collections.html" class="header__link">Колекции</a>
+          </li>
+          <li class="header__item">
+            <a href="about.html" class="header__link">О нас</a>
+          </li>
+          <li class="header__item">
+            <a href="gallery.html" class="header__link">Галерея</a>
+          </li>
+          <li class="header__item">
+            <a href="contacts.html" class="header__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__inner">
+        <form class="header__search header__search--closed" role="search">
+          <button class="header__search-button" type="submit" name="header__label">
+            <span class="visually-hidden">Меню з пошуком</span>
+            <svg class="header__icon-search" width="17" height="16" aria-hidden="true">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </button>
+          <label for="header__input" class="header__label header__label--closed">
+            <span class="visually-hidden">Пошук</span>
+          </label>
+          <input type="text" class="header__input" id="header__input" placeholder="Пошук" name="header__search">
+          <button class="header__input-button">
+            <span class="visually-hidden">Закрыть поиск</span>
+          </button>
+        </form>
+
+        <div class="header__rating">
+          <a href="#" class="header__rating-button" aria-label="Рейтинг">
+            <svg class="header__star" width="20" height="19">
+              <use xlink:href="#icon-star"></use>
+            </svg>
+          </a>
+          <p class="header__count">10</p>
+        </div>
+
+        <section class="header__languages">
+          <h2 class="visually-hidden">Язык интерфейса</h2>
+          <div class="header__languages-wrapper" role="list">
+            <a class="header__languages-item header__languages-item--disabled" role="listitem">RU</a>
+            <div class="header__languages-inner">
+              <a class="header__languages-item header__languages-item--active" role="listitem">EN</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</header>

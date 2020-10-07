@@ -31,7 +31,7 @@ sliders.forEach(sliderDom => {
   tnsLiveRegion.forEach(box => {
     const count = box.appendChild(pagesValueSelector);
     count.classList.add('current');
-    count.textContent = '/' + pagesAmount;
+    count.textContent = ' / ' + pagesAmount;
   });
 });
 
@@ -87,7 +87,7 @@ gallery.forEach(sliderDom => {
   tnsLiveRegion.forEach(box => {
     const count = box.appendChild(pagesValueSelector);
     count.classList.add('current');
-    count.textContent = '/' + pagesAmount;
+    count.textContent = ' / ' + pagesAmount;
   });
 });
 

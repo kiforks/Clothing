@@ -7,6 +7,14 @@
   overflow: hidden;
 }
 
+body.news-body {
+  .header {
+    &--pages {
+      padding-bottom: 23px;
+    }
+  }
+}
+
 .header__wrapper {
   position: relative;
   z-index: 100;
@@ -272,6 +280,14 @@
     padding-bottom: 0;
   }
 
+  body.news-body {
+    .header {
+      &--pages {
+        padding-bottom: 23px;
+      }
+    }
+  }
+
   .header__nav {
     padding-left: 0;
     max-width: 300px;
@@ -321,6 +337,14 @@
 
     &--closed {
       height: 100vh;
+    }
+  }
+
+  body.news-body {
+    .header {
+      &--pages {
+        padding-bottom: 0;
+      }
     }
   }
 

@@ -16,7 +16,7 @@ function sectionsToggle(button, selector, parent) {
         toggleSelector.removeChild(modalWindow);
       }
 
-      modalWindow.scrollIntoView();
+      // modalWindow.scrollIntoView();
 
       if(toggleClass.contains(activeSelector)) {
         toggleClass.remove(activeSelector);

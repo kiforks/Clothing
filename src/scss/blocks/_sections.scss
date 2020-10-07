@@ -2,7 +2,7 @@
   position: relative;
 
   .header {
-    padding-bottom: 115px;
+    padding-bottom: 23px;
   }
 
   .pagination {
@@ -135,7 +135,7 @@
 .sections__modal {
   position: absolute;
   z-index: 1000;
-  top: 50%;
+  top: 0;
   left: 0;
   right: 0;
   visibility: hidden;
@@ -196,13 +196,16 @@
 .sections__link {
   display: block;
   @include center-margin;
+
+  &--main {
+    margin-bottom: 45px;
+  }
 }
 
 //Tablet
 @include tablet {
   .sections-body {
     .header {
-      padding-bottom: 0;
       margin-bottom: 35px;
     }
 

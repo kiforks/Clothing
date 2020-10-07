@@ -50,9 +50,11 @@
 
 .favorites__results {
   @include flex;
+  @include center-margin;
   justify-content: flex-end;
   align-items: center;
-  width: 50%;
+  //width: 50%;
+  width: fit-content;
   @include reset-margin-text;
   margin-bottom: 70px;
 }

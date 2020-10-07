@@ -12,7 +12,7 @@
 <body class="news-body site-wrapper">
   <include src="src/posthtml/templates/_preloader.html"></include>
   <include src="src/posthtml/templates/sprite.html"></include>
-  <include src="src/posthtml/blocks/_header.html"></include>
+  <include src="src/posthtml/blocks/_header--pages.html"></include>
 
 <div class="favorites-container">
   <main class="favorites wrapper">
@@ -27,11 +27,6 @@
       <p class="favorites__amount">5
         Добавлено в избанное позиций:
         <span class="favorites__count">85</span>
-      </p>
-
-      <p class="favorites__results quantity">
-        <label for="favorites__number" class="favorites__label favorites__label--number">Показать результатов:</label>
-        <input type="number" class="favorites__number quantity__item" id="favorites__number" value="12" name="favorites__value">
       </p>
 
       <div class="favorites__inner">
@@ -706,6 +701,11 @@
           </tbody>
         </table>
       </div>
+
+      <p class="favorites__results quantity">
+        <label for="favorites__number" class="favorites__label favorites__label--number">Показать результатов:</label>
+        <input type="number" class="favorites__number quantity__item" id="favorites__number" value="12" name="favorites__value">
+      </p>
 
       <include src="src/posthtml/blocks/_pagination.html"></include>
 
