@@ -38,6 +38,13 @@
   }
 }
 
+.subtitle__link {
+  @include transition;
+  @include hover-opacity;
+  display: inline-block;
+  margin-right: 5px;
+}
+
 //Tablet
 @include tablet {
   .subtitle {
@@ -48,7 +55,8 @@
 //Mobile
 @include mobile {
   .subtitle {
-    margin-bottom: 15px;
+    @include flex;
+    margin-bottom: 20px;
     font-size: 14px;
     line-height: 120%;
   }

@@ -1,6 +1,6 @@
 .statics-body {
   .header {
-    padding-bottom: 115px;
+    padding-bottom: 26px;
   }
 }
 
@@ -209,7 +209,6 @@
 @include tablet {
   .statics-body {
     .header {
-      padding-bottom: 0;
       margin-bottom: 25px;
     }
   }

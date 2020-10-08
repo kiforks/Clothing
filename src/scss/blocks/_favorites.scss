@@ -238,14 +238,45 @@
   font-size: 18px;
   line-height: 22px;
   font-weight: normal;
+
+  .quantity__item {
+    border-color: #aaa;
+  }
+}
+
+.favorites__submit {
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
 }
 
 .favorites__sizes {
   @include reset-margin-text;
+  //display: block;
+  //@include reset-input;
   font-size: 30px;
   line-height: 36px;
   font-weight: 800;
   color: $grey-2;
+}
+
+.favorites__input {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  outline: 0;
+  text-align: center;
+  @include reset-input;
+  @include placeholder-focus;
+  @include placeholder {
+    color: $grey-2;
+  }
+}
+
+.favorites__button {
+  margin-bottom: 0;
 }
 
 .favorites__description {
@@ -286,6 +317,14 @@
     .quantity-nav {
       right: 5px;
     }
+  }
+
+  .favorites__amount {
+    width: 58%;
+  }
+
+  .favorites__submit {
+    width: 100%;
   }
 }
 
@@ -335,8 +374,8 @@
 
   .favorites__amount {
     width: 100%;
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: 15px;
+    font-size: 12px;
     line-height: 120%;
   }
 
@@ -348,5 +387,9 @@
   .favorites__label {
     font-size: 14px;
     line-height: 120%;
+  }
+
+  .favorites__button {
+    margin-bottom: 0;
   }
 }

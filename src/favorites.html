@@ -16,18 +16,23 @@
 
 <div class="favorites-container">
   <main class="favorites wrapper">
-    <h3 class="favorites__subtitle subtitle" data-aos="fade-left">
-      Главная ⸺
+    <div class="favorites__subtitle subtitle" data-aos="fade-left">
+      <a href="index.html" class="subtitle__link">Главная</a> ⸺
       <span class="subtitle__pseudo subtitle__pseudo--favorites">Избранное</span>
-    </h3>
+    </div>
 
-    <section class="favorites__box" data-aos="fade-down">
+    <form class="favorites__box" data-aos="fade-down">
       <h1 class="favorites__title title">Избранные товары</h1>
 
-      <p class="favorites__amount">5
-        Добавлено в избанное позиций:
-        <span class="favorites__count">85</span>
-      </p>
+      <div class="favorites__submit">
+        <p class="favorites__amount">
+          Добавлено в избанное позиций:
+          <span class="favorites__count">85</span>
+        </p>
+
+        <button type="submit" class="favorites__button button button--button button--show-more" data-aos="fade-down">Отправить</button>
+
+      </div>
 
       <div class="favorites__inner">
         <table class="favorites__table" data-aos="fade-down">
@@ -47,13 +52,13 @@
                 <p class="favorites__description">Количество (шт.)</p>
               </th>
               <th class="favorites__cell favorites__cell--height favorites__cell--header">
-                <p class="favorites__description">Высота (см.)</p>
+                <p class="favorites__description">Высота (мм)</p>
               </th>
               <th class="favorites__cell favorites__cell--width favorites__cell--header">
-                <p class="favorites__description">Ширина (см.)</p>
+                <p class="favorites__description">Ширина (мм)</p>
               </th>
               <th class="favorites__cell favorites__cell--depth favorites__cell--header">
-                <p class="favorites__description">Глубина (см.)</p>
+                <p class="favorites__description">Глубина (мм)</p>
               </th>
             </tr>
           </thead>
@@ -101,13 +106,19 @@
                 </p>
               </td>
               <td class="favorites__cell favorites__cell--height">
-                <p class="favorites__sizes favorites__sizes--height">105</p>
+                <p class="favorites__sizes favorites__sizes--height">
+                  <input placeholder="105" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--width">
-                <p class="favorites__sizes favorites__sizes--width">80</p>
+                <p class="favorites__sizes favorites__sizes--width">
+                  <input placeholder="80" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--depth">
-                <p class="favorites__sizes favorites__sizes--depth">60</p>
+                <p class="favorites__sizes favorites__sizes--depth">
+                  <input placeholder="60" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
             </tr>
             <tr class="favorites__row">
@@ -154,13 +165,19 @@
                 </p>
               </td>
               <td class="favorites__cell favorites__cell--height">
-                <p class="favorites__sizes favorites__sizes--height">100</p>
+                <p class="favorites__sizes favorites__sizes--height">
+                  <input placeholder="105" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--width">
-                <p class="favorites__sizes favorites__sizes--width">75</p>
+                <p class="favorites__sizes favorites__sizes--width">
+                  <input placeholder="80" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--depth">
-                <p class="favorites__sizes favorites__sizes--depth">50</p>
+                <p class="favorites__sizes favorites__sizes--depth">
+                  <input placeholder="60" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
             </tr>
             <tr class="favorites__row">
@@ -208,13 +225,19 @@
                 </p>
               </td>
               <td class="favorites__cell favorites__cell--height">
-                <p class="favorites__sizes favorites__sizes--height">120</p>
+                <p class="favorites__sizes favorites__sizes--height">
+                  <input placeholder="105" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--width">
-                <p class="favorites__sizes favorites__sizes--width">90</p>
+                <p class="favorites__sizes favorites__sizes--width">
+                  <input placeholder="80" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--depth">
-                <p class="favorites__sizes favorites__sizes--depth">60</p>
+                <p class="favorites__sizes favorites__sizes--depth">
+                  <input placeholder="60" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
             </tr>
             <tr class="favorites__row">
@@ -261,13 +284,19 @@
                 </p>
               </td>
               <td class="favorites__cell favorites__cell--height">
-                <p class="favorites__sizes favorites__sizes--height">105</p>
+                <p class="favorites__sizes favorites__sizes--height">
+                  <input placeholder="105" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--width">
-                <p class="favorites__sizes favorites__sizes--width">85</p>
+                <p class="favorites__sizes favorites__sizes--width">
+                  <input placeholder="80" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--depth">
-                <p class="favorites__sizes favorites__sizes--depth">40</p>
+                <p class="favorites__sizes favorites__sizes--depth">
+                  <input placeholder="60" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
             </tr>
             <tr class="favorites__row">
@@ -315,13 +344,19 @@
                 </p>
               </td>
               <td class="favorites__cell favorites__cell--height">
-                <p class="favorites__sizes favorites__sizes--height">112</p>
+                <p class="favorites__sizes favorites__sizes--height">
+                  <input placeholder="105" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--width">
-                <p class="favorites__sizes favorites__sizes--width">80</p>
+                <p class="favorites__sizes favorites__sizes--width">
+                  <input placeholder="80" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--depth">
-                <p class="favorites__sizes favorites__sizes--depth">70</p>
+                <p class="favorites__sizes favorites__sizes--depth">
+                  <input placeholder="60" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
             </tr>
             <tr class="favorites__row">
@@ -368,13 +403,19 @@
                 </p>
               </td>
               <td class="favorites__cell favorites__cell--height">
-                <p class="favorites__sizes favorites__sizes--height">100</p>
+                <p class="favorites__sizes favorites__sizes--height">
+                  <input placeholder="105" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--width">
-                <p class="favorites__sizes favorites__sizes--width">90</p>
+                <p class="favorites__sizes favorites__sizes--width">
+                  <input placeholder="80" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--depth">
-                <p class="favorites__sizes favorites__sizes--depth">60</p>
+                <p class="favorites__sizes favorites__sizes--depth">
+                  <input placeholder="60" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
             </tr>
             <tr class="favorites__row">
@@ -420,13 +461,19 @@
                 </p>
               </td>
               <td class="favorites__cell favorites__cell--height">
-                <p class="favorites__sizes favorites__sizes--height">115</p>
+                <p class="favorites__sizes favorites__sizes--height">
+                  <input placeholder="105" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--width">
-                <p class="favorites__sizes favorites__sizes--width">80</p>
+                <p class="favorites__sizes favorites__sizes--width">
+                  <input placeholder="80" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--depth">
-                <p class="favorites__sizes favorites__sizes--depth">60</p>
+                <p class="favorites__sizes favorites__sizes--depth">
+                  <input placeholder="60" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
             </tr>
             <tr class="favorites__row">
@@ -474,13 +521,19 @@
                 </p>
               </td>
               <td class="favorites__cell favorites__cell--height">
-                <p class="favorites__sizes favorites__sizes--height">130</p>
+                <p class="favorites__sizes favorites__sizes--height">
+                  <input placeholder="105" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--width">
-                <p class="favorites__sizes favorites__sizes--width">130</p>
+                <p class="favorites__sizes favorites__sizes--width">
+                  <input placeholder="80" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--depth">
-                <p class="favorites__sizes favorites__sizes--depth">50</p>
+                <p class="favorites__sizes favorites__sizes--depth">
+                  <input placeholder="60" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
             </tr>
             <tr class="favorites__row">
@@ -527,13 +580,19 @@
                 </p>
               </td>
               <td class="favorites__cell favorites__cell--height">
-                <p class="favorites__sizes favorites__sizes--height">125</p>
+                <p class="favorites__sizes favorites__sizes--height">
+                  <input placeholder="105" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--width">
-                <p class="favorites__sizes favorites__sizes--width">160</p>
+                <p class="favorites__sizes favorites__sizes--width">
+                  <input placeholder="80" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--depth">
-                <p class="favorites__sizes favorites__sizes--depth">70</p>
+                <p class="favorites__sizes favorites__sizes--depth">
+                  <input placeholder="60" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
             </tr>
             <tr class="favorites__row">
@@ -582,13 +641,19 @@
                 </p>
               </td>
               <td class="favorites__cell favorites__cell--height">
-                <p class="favorites__sizes favorites__sizes--height">110</p>
+                <p class="favorites__sizes favorites__sizes--height">
+                  <input placeholder="105" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--width">
-                <p class="favorites__sizes favorites__sizes--width">80</p>
+                <p class="favorites__sizes favorites__sizes--width">
+                  <input placeholder="80" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--depth">
-                <p class="favorites__sizes favorites__sizes--depth">80</p>
+                <p class="favorites__sizes favorites__sizes--depth">
+                  <input placeholder="60" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
             </tr>
             <tr class="favorites__row">
@@ -635,13 +700,19 @@
                 </p>
               </td>
               <td class="favorites__cell favorites__cell--height">
-                <p class="favorites__sizes favorites__sizes--height">110</p>
+                <p class="favorites__sizes favorites__sizes--height">
+                  <input placeholder="105" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--width">
-                <p class="favorites__sizes favorites__sizes--width">80</p>
+                <p class="favorites__sizes favorites__sizes--width">
+                  <input placeholder="80" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--depth">
-                <p class="favorites__sizes favorites__sizes--depth">80</p>
+                <p class="favorites__sizes favorites__sizes--depth">
+                  <input placeholder="60" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
             </tr>
             <tr class="favorites__row">
@@ -689,27 +760,30 @@
                 </p>
               </td>
               <td class="favorites__cell favorites__cell--height">
-                <p class="favorites__sizes favorites__sizes--height">105</p>
+                <p class="favorites__sizes favorites__sizes--height">
+                  <input placeholder="105" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--width">
-                <p class="favorites__sizes favorites__sizes--width">175</p>
+                <p class="favorites__sizes favorites__sizes--width">
+                  <input placeholder="80" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
               <td class="favorites__cell favorites__cell--depth">
-                <p class="favorites__sizes favorites__sizes--depth">50</p>
+                <p class="favorites__sizes favorites__sizes--depth">
+                  <input placeholder="60" type="text" class="favorites__input" pattern="[0-9]">
+                </p>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <p class="favorites__results quantity">
-        <label for="favorites__number" class="favorites__label favorites__label--number">Показать результатов:</label>
-        <input type="number" class="favorites__number quantity__item" id="favorites__number" value="12" name="favorites__value">
-      </p>
+      <include src="src/posthtml/blocks/button-show-more/_template.html"></include>
 
       <include src="src/posthtml/blocks/_pagination.html"></include>
 
-    </section>
+    </form>
   </main>
 </div>
 

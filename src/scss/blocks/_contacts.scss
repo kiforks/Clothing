@@ -7,10 +7,7 @@
 .contacts {
   overflow: hidden;
 }
-
-.contacts__wrapper {
-  width: 787px;
-  @include center-margin;
+.contacts__box {
   padding-bottom: 101px;
 }
 
@@ -148,6 +145,16 @@
   background-position: left top;
 }
 
+.contacts__wrapper {
+  width: 787px;
+  @include center-margin;
+}
+
+.contacts__list {
+  margin-bottom: 45px;
+}
+
+
 //Tablet
 @include tablet {
   .contacts-body {
@@ -157,7 +164,11 @@
   }
 
   .contacts__wrapper {
-    width: 100%;
+    width: 768px;
+    @include padding-tablet;
+  }
+
+  .contacts__box {
     padding-bottom: 50px;
   }
 
@@ -192,6 +203,10 @@
 @include mobile {
   .contacts__wrapper {
     width: 100%;
+    @include padding-mobile;
+  }
+
+  .contacts__box {
     padding-bottom: 30px;
   }
 

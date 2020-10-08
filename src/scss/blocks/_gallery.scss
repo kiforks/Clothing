@@ -29,6 +29,19 @@
   .tns-liveregion {
     display: none;
   }
+
+  .gallery__count,
+  .gallery__max {
+    display: inline-block;
+  }
+
+  .gallery__count {
+    margin-right: 5px;
+  }
+
+  .gallery__max {
+    margin-left: 5px;
+  }
 }
 
 .gallery__list {

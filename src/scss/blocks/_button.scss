@@ -1,4 +1,8 @@
 .button {
+  &--button {
+    background-color: transparent;
+  }
+
   position: relative;
   display: inline-block;
   width: 265px;
@@ -23,11 +27,25 @@
     transition: all $transition-delay !important;
   }
   @include active-opacity;
+
+  &--show-more {
+    margin-bottom: 45px;
+  }
+}
+
+.button-show-more {
+  @include flex;
+  justify-content: center;
+  width: 100%;
 }
 
 //Mobile
 @include mobile {
   .button {
     width: 100%;
+
+    &--show-more {
+      margin-bottom: 25px;
+    }
   }
 }

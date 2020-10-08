@@ -12,14 +12,14 @@
 <body class="results-body site-wrapper">
   <include src="src/posthtml/templates/_preloader.html"></include>
   <include src="src/posthtml/templates/sprite.html"></include>
-  <include src="src/posthtml/blocks/_header.html"></include>
+  <include src="src/posthtml/blocks/_header--pages.html"></include>
 
   <div class="results-container">
     <main class="results wrapper">
-      <h3 class="results__subtitle subtitle" data-aos="fade-left">
-        Главная ⸺
+      <div class="results__subtitle subtitle" data-aos="fade-left">
+        <a href="index.html" class="subtitle__link">Главная</a> ⸺
         <span class="subtitle__pseudo subtitle__psesections">Результаты поиска</span>
-      </h3>
+      </div>
 
       <section class="results__box" data-aos="fade-down">
         <h1 class="results__title title">Результаты поиска</h1>
@@ -34,14 +34,11 @@
             Найдено позиций:
             <span class="results__found results__found--number">285</span>
           </p>
-
-          <p class="results__count quantity">
-            <label for="results__number" class="results__label results__label--number">Показать результатов:</label>
-            <input type="number" class="results__number quantity__item" id="results__number" value="12" name="results__value">
-          </p>
         </div>
 
         <include src="src/posthtml/blocks/_results-list.html"></include>
+
+        <include src="src/posthtml/blocks/button-show-more/_template.html"></include>
 
         <include src="src/posthtml/blocks/_pagination.html"></include>
       </section>

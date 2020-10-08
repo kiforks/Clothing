@@ -16,10 +16,10 @@
 
   <div class="main-news-container">
     <main class="main-news wrapper">
-      <h3 class="main-news__subtitle subtitle" data-aos="fade-left">
-        Главная ⸺
+      <div class="main-news__subtitle subtitle" data-aos="fade-left">
+        <a href="index.html" class="subtitle__link">Главная</a> ⸺
         <span class="subtitle__pseudo subtitle__pseudo--news">Блог</span>
-      </h3>
+      </div>
 
       <article class="main-news__box" data-aos="fade-down">
         <h1 class="main-news__title title">Новости и публикации</h1>
@@ -106,6 +106,8 @@
             <p class="main-news__description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit  ...</p>
           </li>
         </ul>
+
+        <include src="src/posthtml/blocks/button-show-more/_template.html"></include>
 
         <include src="src/posthtml/blocks/_pagination.html"></include>
       </article>

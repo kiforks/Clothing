@@ -1,6 +1,6 @@
 .results-body {
   .header {
-    padding-bottom: 115px;
+    padding-bottom: 23px;
   }
 
   .quantity-nav {
@@ -135,13 +135,18 @@
   padding-right: 29px;
   font-weight: bold;
   text-align: right;
+
+  &--catalog {
+    @include flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 //Tablet
 @include tablet {
   .results-body {
     .header {
-      padding-bottom: 0;
       margin-bottom: 25px;
     }
   }
@@ -271,5 +276,11 @@
   .results__description {
     padding: 0;
     margin-bottom: 25px;
+  }
+
+  .results__model {
+    &--catalog {
+      padding-left: 0;
+    }
   }
 }
