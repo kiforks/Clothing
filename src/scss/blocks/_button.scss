@@ -2,7 +2,7 @@
   &--button {
     background-color: transparent;
   }
-
+  @include transition;
   position: relative;
   display: inline-block;
   width: 265px;
@@ -15,6 +15,7 @@
   line-height: 18px;
   letter-spacing: 2px;
   @include before {
+    @include transition;
     left: 13px;
     height: 2px;
     width: 60px;
@@ -22,9 +23,14 @@
     @include center-transform-vertical;
   }
   @include hover {
-    color: white;
-    background-color: #222222;
-    transition: all $transition-delay !important;
+    background-color: $light-red;
+    transform: translate(-7%, -7%);
+  }
+
+  &:hover::before,
+  &:focus::before {
+    top: 45%;
+    left: -7%;
   }
   @include active-opacity;
 
